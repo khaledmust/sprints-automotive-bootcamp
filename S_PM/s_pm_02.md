@@ -1,5 +1,5 @@
 # Stakeholders analysis
-[Stake holders analysis chart](./stakeholders-analysis.png)
+![Stake holders analysis chart](./stakeholders-analysis.png)
 
 # Stakeholders engagement
 | Stakeholders         | Unaware | Resistant | Neutral | Supportive | Leading |
