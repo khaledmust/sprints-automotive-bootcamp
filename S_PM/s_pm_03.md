@@ -1,5 +1,5 @@
 # Team charter
-![Team charter](./team-charter.png\)
+![Team charter](./team-charter.png)
 
 # What I have done to create the team charter?
 - Used different resources to gain a broader understanding on team charter.
