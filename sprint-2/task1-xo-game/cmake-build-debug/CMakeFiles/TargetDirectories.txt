@@ -1,0 +1,3 @@
+D:/projects/sprints-automotive-bootcamp/sprint-2/task1-xo-game/cmake-build-debug/CMakeFiles/task1_xo_game.dir
+D:/projects/sprints-automotive-bootcamp/sprint-2/task1-xo-game/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/projects/sprints-automotive-bootcamp/sprint-2/task1-xo-game/cmake-build-debug/CMakeFiles/rebuild_cache.dir
