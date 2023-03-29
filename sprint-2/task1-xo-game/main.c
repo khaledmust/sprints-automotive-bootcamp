@@ -27,7 +27,7 @@ uint8_t gameBoard[9] = {'0', '1', '2', '3', '4', '5', '6', '7', '8'};
  |  Purpose:  Draw the current layout of the board.
  |
  |  Parameters:
- |      *board (IN) -- A pointer to the board layout.
+ |      *board (IN/OUT) -- A pointer to the board layout.
  |
  |  Returns:
  |      void
@@ -47,7 +47,7 @@ void drawBoard(uint8_t *board) {
  |  Purpose:  Auxiliary function that prompts the user to select a symbol.
  |
  |  Parameters:
- |      symbolChoice (IN/OUT) -- A pointer to store the input value.
+ |      *symbolChoice (IN/OUT) -- A pointer to store the input value.
  |
  |  Returns:
  |      SYMBOL_OK -- The scanned symbol is similar to the defined symbols.
@@ -72,7 +72,7 @@ uint8_t __getSymbol(uint8_t *symbolChoice) {
  |            in the configuration array.
  |
  |  Parameters:
- |      symbolChoice (IN/OUT) -- A pointer to the configuration array.
+ |      *symbolChoice (IN/OUT) -- A pointer to the configuration array.
  |
  |  Returns:
  |      void.
@@ -103,7 +103,7 @@ void setPlayerConfig(uint8_t *configArray) {
  |
  |  Parameters:
  |      playerNumber (IN) -- Number ID of the player.
- |      *symbol (IN) -- Symbol of the player.
+ |      *symbol (IN/OUT) -- Symbol of the player.
  |
  |  Returns:  SYMBOL_OK -- Symbol is correct.
 |             SYMBOL-ERROR -- Symbol is wrong.
@@ -131,7 +131,7 @@ uint8_t getPlayerSymbol(uint8_t playerNumber, uint8_t *symbol) {
  |            movement.
  |
  |  Parameters:
- |      board (IN) -- A pointer to the current layout of the board.
+ |      *board (IN/OUT) -- A pointer to the current layout of the board.
  |      position (IN) -- The position the player wants to place
  |                       the movement.
  |      symbol (IN) -- Symbol of the player to be played.
@@ -178,8 +178,8 @@ void loadAndUpdate(uint8_t playerNumber) {
  |  Purpose:  Determines the current state of the game.
  |
  |  Parameters:
- |      *board (IN) -- Current layout of the game.
- |      *gameState (IN) -- A variable for storing the game state.
+ |      *board (IN/OUT) -- Current layout of the game.
+ |      *gameState (IN/OUT) -- A variable for storing the game state.
  |
  |  Returns:  void
  *-------------------------------------------------------------------*/
