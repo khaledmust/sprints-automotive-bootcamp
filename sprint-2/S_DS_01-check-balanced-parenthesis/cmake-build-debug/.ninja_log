@@ -69,3 +69,8 @@
 65	163	7018745633248458	S_DS_01_check_balanced_parenthesis.exe	c686ce28d8c57341
 2	71	7018745737189763	CMakeFiles/S_DS_01_check_balanced_parenthesis.dir/main.c.obj	e341506fb400754f
 71	170	7018745738163889	S_DS_01_check_balanced_parenthesis.exe	c686ce28d8c57341
+2	101	7018776127391845	CMakeFiles/S_DS_01_check_balanced_parenthesis.dir/main.c.obj	e341506fb400754f
+8	102	7018776127391845	CMakeFiles/S_DS_01_check_balanced_parenthesis.dir/balanced.c.obj	19949a2b33a3876e
+102	234	7018776128665771	S_DS_01_check_balanced_parenthesis.exe	c686ce28d8c57341
+2	80	7018776765381403	CMakeFiles/S_DS_01_check_balanced_parenthesis.dir/main.c.obj	e341506fb400754f
+80	195	7018776766476900	S_DS_01_check_balanced_parenthesis.exe	c686ce28d8c57341

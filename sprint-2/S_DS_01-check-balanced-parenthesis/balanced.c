@@ -30,10 +30,10 @@ int8_t isBalancedParanthethes(uint8_t *expression) {
         }
     }
     if (myStack.top == -1) {
-        printf("Balanced");
+        return 0;
     }
     else
     {
-        printf("Not");
+        return -1;
     }
 }
