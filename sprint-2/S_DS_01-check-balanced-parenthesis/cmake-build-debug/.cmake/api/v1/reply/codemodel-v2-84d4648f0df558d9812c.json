@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "S_DS_01_check_balanced_parenthesis",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "S_DS_01_check_balanced_parenthesis::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-S_DS_01_check_balanced_parenthesis-Debug-4266394ac9ba1a9f56d5.json",
+					"name" : "S_DS_01_check_balanced_parenthesis",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/projects/sprints-automotive-bootcamp/sprint-2/S_DS_01-check-balanced-parenthesis/cmake-build-debug",
+		"source" : "D:/projects/sprints-automotive-bootcamp/sprint-2/S_DS_01-check-balanced-parenthesis"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
