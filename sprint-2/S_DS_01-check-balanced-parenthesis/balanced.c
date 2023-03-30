@@ -13,10 +13,12 @@
 int8_t isBalancedParanthethes(uint8_t *expression) {
     ST_stack_t myStack;
     uint8_t tmp;
+    uint8_t flag = 0;
     createEmptyStack(&myStack);
     for (int i = 0; i < strlen(expression); i++) {
         if (expression[i] == '{' || expression[i] == '}' || expression[i] == '(' || expression[i] == ')') {
             push(&myStack, expression[i]);
+            flag = 1;
         }
         if (myStack.top > 0) {
             if (myStack.elements[myStack.top] == '}' && myStack.elements[--myStack.top] == '{') {
@@ -28,6 +30,9 @@ int8_t isBalancedParanthethes(uint8_t *expression) {
                 pop(&myStack, &tmp);
             }
         }
+    }
+    if (flag != 1) {
+        return -2;
     }
     if (myStack.top == -1) {
         return 0;

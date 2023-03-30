@@ -15,6 +15,8 @@ int main() {
         printf("The expression is balanced.\n");
     } else if (expression_state == -1) {
         printf("The expression is not balanced.\n");
+    } else if (expression_state == -2) {
+        printf("The expression doesn't have any parentheses.");
     }
 
     return 0;
