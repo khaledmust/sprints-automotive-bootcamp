@@ -1,0 +1,59 @@
+\hypertarget{terminal_8h_source}{}\doxysection{terminal.\+h}
+\mbox{\hyperlink{terminal_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PROJECT\_SPRINT\_2\_TERMINAL\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PROJECT\_SPRINT\_2\_TERMINAL\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <time.h>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <ctype.h>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define MAX\_TRANSACTION\_AMOUNT 5000}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_s_t__card_data__t}{ST\_cardData\_t}}}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15     uint8\_t \mbox{\hyperlink{struct_s_t__card_data__t_a8bc7195eb27a2b367dcdc37307ee1adb}{cardHolderName}}[25];}
+\DoxyCodeLine{16     uint8\_t \mbox{\hyperlink{struct_s_t__card_data__t_a1a00de6ab612791afa3cf7fed0532346}{primaryAccountNumber}}[20];}
+\DoxyCodeLine{17     uint8\_t \mbox{\hyperlink{struct_s_t__card_data__t_a1c5e3cd301df2d790147747dc0a924db}{cardExpirationDate}}[6];}
+\DoxyCodeLine{18 \}\mbox{\hyperlink{struct_s_t__card_data__t}{ST\_cardData\_t}};}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{30 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_s_t__terminal_data__t}{ST\_terminalData\_t}}}
+\DoxyCodeLine{31 \{}
+\DoxyCodeLine{32     \textcolor{keywordtype}{float} \mbox{\hyperlink{struct_s_t__terminal_data__t_a9e0b375cf4a2288afb266c1f72793e06}{transAmount}};}
+\DoxyCodeLine{33     \textcolor{keywordtype}{float} \mbox{\hyperlink{struct_s_t__terminal_data__t_a27aa15d751a6bd5b55e67c57e460f012}{maxTransAmount}};}
+\DoxyCodeLine{34     uint8\_t \mbox{\hyperlink{struct_s_t__terminal_data__t_a402ef0508868d5326796f1228edfffdd}{transactionDate}}[11];}
+\DoxyCodeLine{35 \}\mbox{\hyperlink{struct_s_t__terminal_data__t}{ST\_terminalData\_t}};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keywordtype}{void} \mbox{\hyperlink{terminal_8h_a148d329cdc04dd4e4b07bb15fbc51064}{\_\_currentTime}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{43 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \mbox{\hyperlink{terminal_8h_a56c6d7b821b971e7bad4adec8f41a749}{EN\_terminalError\_t}}}
+\DoxyCodeLine{44 \{}
+\DoxyCodeLine{45     \mbox{\hyperlink{terminal_8h_a56c6d7b821b971e7bad4adec8f41a749aa8556be837d61da051bde820d4840436}{TERMINAL\_OK}}, \mbox{\hyperlink{terminal_8h_a56c6d7b821b971e7bad4adec8f41a749a558265219bce8d541f1160c1916d2e4b}{WRONG\_DATE}}, \mbox{\hyperlink{terminal_8h_a56c6d7b821b971e7bad4adec8f41a749ae8c42ca25a707c9c4fea13706ba0ea55}{EXPIRED\_CARD}}, \mbox{\hyperlink{terminal_8h_a56c6d7b821b971e7bad4adec8f41a749a24312799a0eda70bb2473ca0f797429f}{INVALID\_CARD}}, \mbox{\hyperlink{terminal_8h_a56c6d7b821b971e7bad4adec8f41a749a0c5cde81802e709a81ffbcb367b4559b}{INVALID\_AMOUNT}}, \mbox{\hyperlink{terminal_8h_a56c6d7b821b971e7bad4adec8f41a749ad75e70f2f05fa26381ff57da10661784}{EXCEED\_MAX\_AMOUNT}}, \mbox{\hyperlink{terminal_8h_a56c6d7b821b971e7bad4adec8f41a749a41f5936100c4bf0c7fb6574e505e0e2f}{INVALID\_MAX\_AMOUNT}}}
+\DoxyCodeLine{46 \}\mbox{\hyperlink{terminal_8h_a56c6d7b821b971e7bad4adec8f41a749}{EN\_terminalError\_t}} ;}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{55 \mbox{\hyperlink{terminal_8h_a56c6d7b821b971e7bad4adec8f41a749}{EN\_terminalError\_t}} \mbox{\hyperlink{terminal_8h_ae693a265bc3eb2093154d13710542c68}{getTransactionDate}}(\mbox{\hyperlink{struct_s_t__terminal_data__t}{ST\_terminalData\_t}} *termData);}
+\DoxyCodeLine{63 \mbox{\hyperlink{terminal_8h_a56c6d7b821b971e7bad4adec8f41a749}{EN\_terminalError\_t}} \mbox{\hyperlink{terminal_8h_a9d542275b72784f5265f4d1a6ac23828}{isCardExpired}}(\mbox{\hyperlink{struct_s_t__card_data__t}{ST\_cardData\_t}} *cardData, \mbox{\hyperlink{struct_s_t__terminal_data__t}{ST\_terminalData\_t}} *termData);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{71 \mbox{\hyperlink{terminal_8h_a56c6d7b821b971e7bad4adec8f41a749}{EN\_terminalError\_t}} \mbox{\hyperlink{terminal_8h_a55275ca9276c9d8b0d911d3f1652a9c7}{getTransactionAmount}}(\mbox{\hyperlink{struct_s_t__terminal_data__t}{ST\_terminalData\_t}} *termData);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{79 \mbox{\hyperlink{terminal_8h_a56c6d7b821b971e7bad4adec8f41a749}{EN\_terminalError\_t}} \mbox{\hyperlink{terminal_8h_a690420e57245346b8f4de81a0a772d82}{isBelowMaxAmount}}(\mbox{\hyperlink{struct_s_t__terminal_data__t}{ST\_terminalData\_t}} *termData);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{88 \mbox{\hyperlink{terminal_8h_a56c6d7b821b971e7bad4adec8f41a749}{EN\_terminalError\_t}} \mbox{\hyperlink{terminal_8h_ae241356d95f17d09cace059a8ad03f22}{setMaxAmount}}(\mbox{\hyperlink{struct_s_t__terminal_data__t}{ST\_terminalData\_t}} *termData, \textcolor{keywordtype}{float} maxAmount);}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{96 \mbox{\hyperlink{terminal_8h_a56c6d7b821b971e7bad4adec8f41a749}{EN\_terminalError\_t}} \mbox{\hyperlink{terminal_8h_a929e3d2dbfce0d76cdab9c0ebea8ae73}{isValidCardPAN}}(\mbox{\hyperlink{struct_s_t__card_data__t}{ST\_cardData\_t}} *cardData); \textcolor{comment}{// Optional}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{103 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__unit_testing_gab16929a1becad54beb083e45d77be568}{getTransactionDateTest}}(\textcolor{keywordtype}{void}); }
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__unit_testing_ga198f9cf511b456355b488721615c5f10}{isCardExpiredTest}}(\textcolor{keywordtype}{void}); }
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__unit_testing_ga8a12d227b4a667b7ff67991f08d4c372}{getTransactionAmountTest}}(\textcolor{keywordtype}{void}); }
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__unit_testing_ga16202e394fbf87ca1f08779eba0ea255}{isBelowMaxAmountTest}}(\textcolor{keywordtype}{void}); }
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__unit_testing_gadf0430e533031ffec336458c02810ef8}{setMaxAmountTest}}(\textcolor{keywordtype}{void}); }
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJECT\_SPRINT\_2\_TERMINAL\_H}}
+
+\end{DoxyCode}
