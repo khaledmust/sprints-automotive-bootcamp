@@ -1,3 +1,0 @@
-D:/projects/sprints-automotive-bootcamp/sprint-2/S_ALG/cmake-build-debug/CMakeFiles/S_ALG.dir
-D:/projects/sprints-automotive-bootcamp/sprint-2/S_ALG/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/projects/sprints-automotive-bootcamp/sprint-2/S_ALG/cmake-build-debug/CMakeFiles/rebuild_cache.dir
