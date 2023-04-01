@@ -2,6 +2,8 @@
 
 int main() {
 
+//    __testStack();
+
     uint8_t user_string[ARRAY_SIZE];
     printf("Enter the expression to want to check: ");
     scanf("%s", user_string);
