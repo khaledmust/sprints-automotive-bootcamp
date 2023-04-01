@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include "longest_consecutive_subsequence.h"
+#include "main.h"
 
 int main() {
 

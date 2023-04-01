@@ -1,19 +1,15 @@
-#ifndef S_ALG_LONGEST_CONSECUTIVE_SUBSEQUENCE_H
-#define S_ALG_LONGEST_CONSECUTIVE_SUBSEQUENCE_H
+#ifndef S_ALG_LCS_H
+#define S_ALG_LCS_H
 
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
+#include "sort.h"
 
-/**
- * @brief Performs insertion sorting algorithm.
- * @param[in,out] array Address of the array to be sorted.
- * @param[in] arraySize Size of the input array.
- * @return -1 Array is empty.
- * @return -2 Array size is 0 or >10.
- * @return 0 Sorting is done without errors.
- */
-int8_t insertionSort(int32_t *array, uint8_t arraySize);
+typedef enum EN_lcsError_t
+{
+    NO_LCS = -3, INVALID_ARRAY_SIZE = -2, EMPTY_ARRAY, SUCCESS
+}EN_lcsError_t ;
 
 /**
  * @brief Prints all the elements of input array.
@@ -43,4 +39,4 @@ int8_t promptUser(int32_t **array, uint8_t *arraySize);
  */
 int8_t lcsGetSize(int32_t *array, uint8_t arraySize, uint8_t *sizeofLCS);
 
-#endif //S_ALG_LONGEST_CONSECUTIVE_SUBSEQUENCE_H
+#endif //S_ALG_LCS_H

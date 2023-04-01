@@ -4,6 +4,10 @@
 #include "stdint.h"
 #include <stdio.h>
 
+typedef enum EN_paranthethesError_t {
+    INVALID_PARENTHESES = -2, IMBALANCED_PARENTHESES, BALANCED_PARENTHESES
+}EN_paranthethesError_t;
+
 /* Description:
  * - This function takes an expression array max 10 characters
  * - Checks if the parentheses are balanced or not
@@ -13,6 +17,6 @@
  * - returns -1 if the parentheses are not balanced
  * - returns 0 if the parentheses are balanced
  */
-int8_t isBalancedParanthethes(uint8_t *expression);
+EN_paranthethesError_t isBalancedParanthethes(uint8_t *expression);
 
 #endif //S_DS_01_CHECK_BALANCED_PARENTHESIS_BALANCED_H

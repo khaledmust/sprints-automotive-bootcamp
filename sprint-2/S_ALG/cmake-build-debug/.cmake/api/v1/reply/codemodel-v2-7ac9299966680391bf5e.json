@@ -9,7 +9,7 @@
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.24"
+						"string" : "3.25"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "S_DS_01_check_balanced_parenthesis",
+					"name" : "S_ALG",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "S_DS_01_check_balanced_parenthesis::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-S_DS_01_check_balanced_parenthesis-Debug-4266394ac9ba1a9f56d5.json",
-					"name" : "S_DS_01_check_balanced_parenthesis",
+					"id" : "S_ALG::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-S_ALG-Debug-9319e8af28aa8373a883.json",
+					"name" : "S_ALG",
 					"projectIndex" : 0
 				}
 			]
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/projects/sprints-automotive-bootcamp/sprint-2/S_DS_01-check-balanced-parenthesis/cmake-build-debug",
-		"source" : "D:/projects/sprints-automotive-bootcamp/sprint-2/S_DS_01-check-balanced-parenthesis"
+		"build" : "D:/projects/sprints-automotive-bootcamp/sprint-2/S_ALG/cmake-build-debug",
+		"source" : "D:/projects/sprints-automotive-bootcamp/sprint-2/S_ALG"
 	},
 	"version" : 
 	{

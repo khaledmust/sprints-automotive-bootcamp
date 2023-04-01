@@ -1,6 +1,5 @@
 #include "balanced.h"
 
-
 /* Description:
  * - This function takes an expression array max 10 characters
  * - Checks if the parentheses are balanced or not
@@ -10,7 +9,7 @@
  * - returns -1 if the parentheses are not balanced
  * - returns 0 if the parentheses are balanced
  */
-int8_t isBalancedParanthethes(uint8_t *expression) {
+EN_paranthethesError_t isBalancedParanthethes(uint8_t *expression) {
     ST_stack_t myStack;
     uint8_t tmp;
     uint8_t flag = 0;
@@ -32,13 +31,13 @@ int8_t isBalancedParanthethes(uint8_t *expression) {
         }
     }
     if (flag != 1) {
-        return -2;
+        return INVALID_PARENTHESES;
     }
     if (myStack.top == -1) {
-        return 0;
+        return BALANCED_PARENTHESES;
     }
     else
     {
-        return -1;
+        return IMBALANCED_PARENTHESES;
     }
 }

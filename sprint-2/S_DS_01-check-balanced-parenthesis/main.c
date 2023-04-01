@@ -1,21 +1,17 @@
-#include <stdio.h>
-//#include "stack.h"
-#include "balanced.h"
+#include "main.h"
 
 int main() {
-    /* Uncomment to test the stack implementation. */
-//    __testStack();
 
-    uint8_t user_string[50];
+    uint8_t user_string[ARRAY_SIZE];
     printf("Enter the expression to want to check: ");
     scanf("%s", user_string);
 
     int8_t expression_state = isBalancedParanthethes(user_string);
-    if (expression_state == 0) {
+    if (expression_state == BALANCED_PARENTHESES) {
         printf("The expression is balanced.\n");
-    } else if (expression_state == -1) {
+    } else if (expression_state == IMBALANCED_PARENTHESES) {
         printf("The expression is not balanced.\n");
-    } else if (expression_state == -2) {
+    } else if (expression_state == INVALID_PARENTHESES) {
         printf("The expression doesn't have any parentheses.");
     }
 

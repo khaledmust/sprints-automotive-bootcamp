@@ -3,4 +3,4 @@ project(S_ALG C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(S_ALG main.c longest_consecutive_subsequence.c)
+add_executable(S_ALG main.c lcs.c sort.c sort.h main.h)

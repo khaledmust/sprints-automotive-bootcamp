@@ -55,8 +55,14 @@ build CMakeFiles/S_ALG.dir/main.c.obj: C_COMPILER__S_ALG_Debug D$:/projects/spri
   OBJECT_DIR = CMakeFiles\S_ALG.dir
   OBJECT_FILE_DIR = CMakeFiles\S_ALG.dir
 
-build CMakeFiles/S_ALG.dir/longest_consecutive_subsequence.c.obj: C_COMPILER__S_ALG_Debug D$:/projects/sprints-automotive-bootcamp/sprint-2/S_ALG/longest_consecutive_subsequence.c || cmake_object_order_depends_target_S_ALG
-  DEP_FILE = CMakeFiles\S_ALG.dir\longest_consecutive_subsequence.c.obj.d
+build CMakeFiles/S_ALG.dir/lcs.c.obj: C_COMPILER__S_ALG_Debug D$:/projects/sprints-automotive-bootcamp/sprint-2/S_ALG/lcs.c || cmake_object_order_depends_target_S_ALG
+  DEP_FILE = CMakeFiles\S_ALG.dir\lcs.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu99
+  OBJECT_DIR = CMakeFiles\S_ALG.dir
+  OBJECT_FILE_DIR = CMakeFiles\S_ALG.dir
+
+build CMakeFiles/S_ALG.dir/sort.c.obj: C_COMPILER__S_ALG_Debug D$:/projects/sprints-automotive-bootcamp/sprint-2/S_ALG/sort.c || cmake_object_order_depends_target_S_ALG
+  DEP_FILE = CMakeFiles\S_ALG.dir\sort.c.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu99
   OBJECT_DIR = CMakeFiles\S_ALG.dir
   OBJECT_FILE_DIR = CMakeFiles\S_ALG.dir
@@ -69,7 +75,7 @@ build CMakeFiles/S_ALG.dir/longest_consecutive_subsequence.c.obj: C_COMPILER__S_
 #############################################
 # Link the executable S_ALG.exe
 
-build S_ALG.exe: C_EXECUTABLE_LINKER__S_ALG_Debug CMakeFiles/S_ALG.dir/main.c.obj CMakeFiles/S_ALG.dir/longest_consecutive_subsequence.c.obj
+build S_ALG.exe: C_EXECUTABLE_LINKER__S_ALG_Debug CMakeFiles/S_ALG.dir/main.c.obj CMakeFiles/S_ALG.dir/lcs.c.obj CMakeFiles/S_ALG.dir/sort.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\S_ALG.dir
