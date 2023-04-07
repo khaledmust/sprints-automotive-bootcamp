@@ -1,0 +1,25 @@
+\hypertarget{push__button_8h_source}{}\doxysection{push\+\_\+button.\+h}
+\label{push__button_8h_source}\index{ECUAL/Push\_button/push\_button.h@{ECUAL/Push\_button/push\_button.h}}
+\mbox{\hyperlink{push__button_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MOVING\_CAR\_SYSTEM\_PUSH\_BUTTON\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MOVING\_CAR\_SYSTEM\_PUSH\_BUTTON\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}../../MCAL/DIO/dio.h"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{13 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_p_b___init__t}{PB\_Init\_t}} \{}
+\DoxyCodeLine{14     \mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635}{EN\_DIO\_PORT}} \mbox{\hyperlink{struct_p_b___init__t_af8fb0f45ee0195c7422a49e6a8d72369}{port}};}
+\DoxyCodeLine{15     \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308}{EN\_DIO\_PIN}} \mbox{\hyperlink{struct_p_b___init__t_a60a7528b17f719c3b48a478055ba09be}{pin}};}
+\DoxyCodeLine{16 \}\mbox{\hyperlink{struct_p_b___init__t}{PB\_Init\_t}};}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{22 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \mbox{\hyperlink{push__button_8h_a913a20804ffc431dd645e22b49f519d2}{EN\_PB\_LEVEL}} \{}
+\DoxyCodeLine{23     \mbox{\hyperlink{push__button_8h_a913a20804ffc431dd645e22b49f519d2a01cff6051f18b6a491b0e862f4bfdcde}{PB\_LOW}} = 0, \mbox{\hyperlink{push__button_8h_a913a20804ffc431dd645e22b49f519d2abd9cc810e58af1d307367f00512e1118}{PB\_HIGH}}}
+\DoxyCodeLine{24 \}\mbox{\hyperlink{push__button_8h_a913a20804ffc431dd645e22b49f519d2}{EN\_PB\_LEVEL}};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{30 \textcolor{keywordtype}{void} \mbox{\hyperlink{push__button_8h_aa98b5f387441764b06d5cd0778fa6b2e}{PB\_Init}}(\mbox{\hyperlink{struct_p_b___init__t}{PB\_Init\_t}} *p\_config\_struct);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{37 \mbox{\hyperlink{push__button_8h_a913a20804ffc431dd645e22b49f519d2}{EN\_PB\_LEVEL}} \mbox{\hyperlink{push__button_8h_a974fba8c90454729a60977451d0ea2f9}{PB\_ReadState}}(\mbox{\hyperlink{struct_p_b___init__t}{PB\_Init\_t}} *p\_config\_struct);}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MOVING\_CAR\_SYSTEM\_PUSH\_BUTTON\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,36 @@
+\hypertarget{led_8h_source}{}\doxysection{led.\+h}
+\label{led_8h_source}\index{ECUAL/LED/led.h@{ECUAL/LED/led.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MOVING\_CAR\_SYSTEM\_LED\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MOVING\_CAR\_SYSTEM\_LED\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}../../MCAL/DIO/dio.h"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} EN\_LED\_API\_STATE \{}
+\DoxyCodeLine{7     LED\_SUCCESS = 0, LED\_PORT\_INVALID, LED\_DIRECTION\_INVALID}
+\DoxyCodeLine{8 \}EN\_LED\_API\_STATE;}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} EN\_LED\_STATUS \{}
+\DoxyCodeLine{11     LED\_OFF = 0, LED\_ON}
+\DoxyCodeLine{12 \}EN\_LED\_STATUS;}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{22 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_l_e_d___init__t}{LED\_Init\_t}} \{}
+\DoxyCodeLine{23     EN\_DIO\_PORT \mbox{\hyperlink{struct_l_e_d___init__t_a765250b3efa41dea274569a595a83022}{port}};}
+\DoxyCodeLine{24     EN\_DIO\_PIN \mbox{\hyperlink{struct_l_e_d___init__t_ad1dd3cf48b48ebd77e6a4f4cca984933}{pin}};}
+\DoxyCodeLine{25     EN\_LED\_STATUS led\_status;}
+\DoxyCodeLine{26 \}\mbox{\hyperlink{struct_l_e_d___init__t}{LED\_Init\_t}};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{32 EN\_LED\_API\_STATE LED\_Init(\mbox{\hyperlink{struct_l_e_d___init__t}{LED\_Init\_t}} *p\_led\_config\_struct);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{38 EN\_LED\_API\_STATE LED\_On(\mbox{\hyperlink{struct_l_e_d___init__t}{LED\_Init\_t}} *p\_led\_config\_struct);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{44 EN\_LED\_API\_STATE LED\_Off(\mbox{\hyperlink{struct_l_e_d___init__t}{LED\_Init\_t}} *p\_led\_config\_struct);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MOVING\_CAR\_SYSTEM\_LED\_H}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{comment}{/************************************************************************/}}
+\DoxyCodeLine{49 \textcolor{comment}{/*                                                                      */}}
+\DoxyCodeLine{50 \textcolor{comment}{/************************************************************************/}}
+
+\end{DoxyCode}

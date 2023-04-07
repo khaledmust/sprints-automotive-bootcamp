@@ -1,0 +1,53 @@
+\hypertarget{dio_8h_source}{}\doxysection{dio.\+h}
+\label{dio_8h_source}\index{MCAL/DIO/dio.h@{MCAL/DIO/dio.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef MOVING\_CAR\_SYSTEM\_DIO\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define MOVING\_CAR\_SYSTEM\_DIO\_H}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}../../Utilities/registers.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}../../Utilities/std\_types.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}../../Utilities/common\_macros.h"{}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{13 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} EN\_DIO\_ERROR\_STATE \{}
+\DoxyCodeLine{14     DIO\_SUCCESS = 0, DIO\_PORT\_INVALID, DIO\_DIRECTION\_INVALID, DIO\_PIN\_INVALID}
+\DoxyCodeLine{15 \}EN\_DIO\_ERROR\_STATE;}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{21 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} EN\_DIO\_DIRECTION \{}
+\DoxyCodeLine{22     DIO\_INPUT = 0, DIO\_OUTPUT}
+\DoxyCodeLine{23 \}EN\_DIO\_DIRECTION;}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{29 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} EN\_DIO\_PIN \{}
+\DoxyCodeLine{30    PIN0 = 0, PIN1, PIN2, PIN3, PIN4, PIN5, PIN6, PIN7, PIN8}
+\DoxyCodeLine{31 \}EN\_DIO\_PIN;}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{38 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} EN\_DIO\_PORT \{}
+\DoxyCodeLine{39     PORT\_A = 0, PORT\_B, PORT\_C, PORT\_D}
+\DoxyCodeLine{40 \}EN\_DIO\_PORT;}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{46 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} EN\_DIO\_LEVEL \{}
+\DoxyCodeLine{47     DIO\_LOW = 0, DIO\_HIGH}
+\DoxyCodeLine{48 \}EN\_DIO\_LEVEL;}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{64 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\_Init\_t}} \{}
+\DoxyCodeLine{65     EN\_DIO\_PORT \mbox{\hyperlink{struct_d_i_o___init__t_a200517d46ec729f190c6cfc471d7dc62}{port}};}
+\DoxyCodeLine{66     EN\_DIO\_PIN \mbox{\hyperlink{struct_d_i_o___init__t_acd11ba0a2310c3424b9a83178861ca55}{pin}};}
+\DoxyCodeLine{67     EN\_DIO\_DIRECTION \mbox{\hyperlink{struct_d_i_o___init__t_a19465756f0c41dd86e841881e9504aa7}{direction}};}
+\DoxyCodeLine{68     \textcolor{keyword}{union }\{}
+\DoxyCodeLine{69         uint8 \mbox{\hyperlink{struct_d_i_o___init__t_a9697a1713a20669f757efd4dfd803ea3}{pin\_value}};}
+\DoxyCodeLine{70         uint8 \mbox{\hyperlink{struct_d_i_o___init__t_aaa85dbdb625baba57692fd16b84769cf}{port\_value}};}
+\DoxyCodeLine{71     \};}
+\DoxyCodeLine{72 \}\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\_Init\_t}};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{80 EN\_DIO\_ERROR\_STATE DIO\_Init(\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\_Init\_t}} *p\_config\_struct);}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{89 EN\_DIO\_ERROR\_STATE DIO\_ReadPin(\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\_Init\_t}} *p\_config\_struct);}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{98 EN\_DIO\_ERROR\_STATE DIO\_WritePin(\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\_Init\_t}} *p\_config\_struct);}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{107 EN\_DIO\_ERROR\_STATE DIO\_TogglePin(\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\_Init\_t}} *p\_config\_struct);}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MOVING\_CAR\_SYSTEM\_DIO\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,70 @@
+\hypertarget{struct_d_i_o___init__t}{}\doxysection{DIO\+\_\+\+Init\+\_\+t Struct Reference}
+\label{struct_d_i_o___init__t}\index{DIO\_Init\_t@{DIO\_Init\_t}}
+
+
+Holds the configuration of a specific pin of a port.  
+
+
+
+
+{\ttfamily \#include $<$dio.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+EN\+\_\+\+DIO\+\_\+\+PORT \mbox{\hyperlink{struct_d_i_o___init__t_a200517d46ec729f190c6cfc471d7dc62}{port}}
+\item 
+EN\+\_\+\+DIO\+\_\+\+PIN \mbox{\hyperlink{struct_d_i_o___init__t_acd11ba0a2310c3424b9a83178861ca55}{pin}}
+\item 
+EN\+\_\+\+DIO\+\_\+\+DIRECTION \mbox{\hyperlink{struct_d_i_o___init__t_a19465756f0c41dd86e841881e9504aa7}{direction}}
+\item 
+\mbox{\Hypertarget{struct_d_i_o___init__t_a391281a78f59100ceb8af19ea51778f0}\label{struct_d_i_o___init__t_a391281a78f59100ceb8af19ea51778f0}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>uint8 {\bfseries pin\_value}\\
+\>uint8 {\bfseries port\_value}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Holds the configuration of a specific pin of a port. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_d_i_o___init__t_a19465756f0c41dd86e841881e9504aa7}\label{struct_d_i_o___init__t_a19465756f0c41dd86e841881e9504aa7}} 
+\index{DIO\_Init\_t@{DIO\_Init\_t}!direction@{direction}}
+\index{direction@{direction}!DIO\_Init\_t@{DIO\_Init\_t}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily DIO\+\_\+\+Init\+\_\+t\+::direction}
+
+Member \textquotesingle{}direction\textquotesingle{} sets the direction of the pin. \mbox{\Hypertarget{struct_d_i_o___init__t_acd11ba0a2310c3424b9a83178861ca55}\label{struct_d_i_o___init__t_acd11ba0a2310c3424b9a83178861ca55}} 
+\index{DIO\_Init\_t@{DIO\_Init\_t}!pin@{pin}}
+\index{pin@{pin}!DIO\_Init\_t@{DIO\_Init\_t}}
+\doxysubsubsection{\texorpdfstring{pin}{pin}}
+{\footnotesize\ttfamily DIO\+\_\+\+Init\+\_\+t\+::pin}
+
+Member \textquotesingle{}pin\textquotesingle{} sets the pin to be configured. \mbox{\Hypertarget{struct_d_i_o___init__t_a9697a1713a20669f757efd4dfd803ea3}\label{struct_d_i_o___init__t_a9697a1713a20669f757efd4dfd803ea3}} 
+\index{DIO\_Init\_t@{DIO\_Init\_t}!pin\_value@{pin\_value}}
+\index{pin\_value@{pin\_value}!DIO\_Init\_t@{DIO\_Init\_t}}
+\doxysubsubsection{\texorpdfstring{pin\_value}{pin\_value}}
+{\footnotesize\ttfamily DIO\+\_\+\+Init\+\_\+t\+::pin\+\_\+value}
+
+Member \textquotesingle{}pin\+\_\+value; contains the value of the pin when it\textquotesingle{}s configured as input mode. \mbox{\Hypertarget{struct_d_i_o___init__t_a200517d46ec729f190c6cfc471d7dc62}\label{struct_d_i_o___init__t_a200517d46ec729f190c6cfc471d7dc62}} 
+\index{DIO\_Init\_t@{DIO\_Init\_t}!port@{port}}
+\index{port@{port}!DIO\_Init\_t@{DIO\_Init\_t}}
+\doxysubsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily DIO\+\_\+\+Init\+\_\+t\+::port}
+
+Member \textquotesingle{}port\textquotesingle{} sets the port to be configured. \mbox{\Hypertarget{struct_d_i_o___init__t_aaa85dbdb625baba57692fd16b84769cf}\label{struct_d_i_o___init__t_aaa85dbdb625baba57692fd16b84769cf}} 
+\index{DIO\_Init\_t@{DIO\_Init\_t}!port\_value@{port\_value}}
+\index{port\_value@{port\_value}!DIO\_Init\_t@{DIO\_Init\_t}}
+\doxysubsubsection{\texorpdfstring{port\_value}{port\_value}}
+{\footnotesize\ttfamily DIO\+\_\+\+Init\+\_\+t\+::port\+\_\+value}
+
+Member \textquotesingle{}port\+\_\+value\textquotesingle{} contains the value to be written to the port register if the pin is configured as output. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+MCAL/\+DIO/dio.\+h\end{DoxyCompactItemize}

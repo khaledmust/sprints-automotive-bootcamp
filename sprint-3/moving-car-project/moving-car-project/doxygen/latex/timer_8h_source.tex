@@ -1,0 +1,61 @@
+\hypertarget{timer_8h_source}{}\doxysection{timer.\+h}
+\label{timer_8h_source}\index{MCAL/Timer/timer.h@{MCAL/Timer/timer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by khale on 2023-\/04-\/05.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef MOVING\_CAR\_SYSTEM\_TIMER\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define MOVING\_CAR\_SYSTEM\_TIMER\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}../../Utilities/registers.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}../../Utilities/std\_types.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}../../Utilities/common\_macros.h"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14     NORMAL\_WG, PWM\_WG, CTC\_WG, FAST\_PWM\_WG}
+\DoxyCodeLine{15 \}TIMER0\_WaveFormGeneration;}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{comment}{/* Clock Selection. */}}
+\DoxyCodeLine{18 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20     NO\_CLOCK, F\_CPU\_CLOCK, F\_CPU\_8, F\_CPU\_64, F\_CPU\_256, F\_CPU\_1024}
+\DoxyCodeLine{21 \}TIMER0\_ClockSelect;}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{24 \{}
+\DoxyCodeLine{25     INTERRUPT\_DISABLED, INTERRUPT\_ENABLED}
+\DoxyCodeLine{26 \}TIMER0\_InterruptMode;}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{29 \{}
+\DoxyCodeLine{30     TIMER0\_OVERFLOW, TIMER0\_COMPARE}
+\DoxyCodeLine{31 \}TIMER0\_MODE;}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{comment}{/* Timer configuration structure. */}}
+\DoxyCodeLine{34 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{35 \{}
+\DoxyCodeLine{36     TIMER0\_MODE timerMode;}
+\DoxyCodeLine{37     TIMER0\_ClockSelect timerClock;}
+\DoxyCodeLine{38     TIMER0\_WaveFormGeneration timerWaveGeneration;}
+\DoxyCodeLine{39     uint8 TIMER0\_Reg;}
+\DoxyCodeLine{40     uint8 TIMER0\_CompareValue;}
+\DoxyCodeLine{41     TIMER0\_InterruptMode InterruptMode;}
+\DoxyCodeLine{42 \}\mbox{\hyperlink{struct_t_i_m_e_r0___config}{TIMER0\_Config}};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{comment}{/* Initialize and start Timer0.}}
+\DoxyCodeLine{45 \textcolor{comment}{ * Global interrupt is enabled when interrupt mode is chosen.}}
+\DoxyCodeLine{46 \textcolor{comment}{ */}}
+\DoxyCodeLine{47 \textcolor{keywordtype}{void} Timer0\_Init(\mbox{\hyperlink{struct_t_i_m_e_r0___config}{TIMER0\_Config}} *UserConfig);}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{comment}{/* De-\/initialize Timer0 registers and turn off the timer. */}}
+\DoxyCodeLine{50 \textcolor{keywordtype}{void} Timer0\_DeInit(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{keywordtype}{void} Timer0\_setCallBack(\textcolor{keywordtype}{void} (*a\_ptr) (\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MOVING\_CAR\_SYSTEM\_TIMER\_H}}
+
+\end{DoxyCode}

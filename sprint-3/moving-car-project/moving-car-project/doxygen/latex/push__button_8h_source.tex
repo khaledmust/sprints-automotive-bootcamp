@@ -1,0 +1,31 @@
+\hypertarget{push__button_8h_source}{}\doxysection{push\+\_\+button.\+h}
+\label{push__button_8h_source}\index{ECUAL/Push\_Button/push\_button.h@{ECUAL/Push\_Button/push\_button.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MOVING\_CAR\_SYSTEM\_PUSH\_BUTTON\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MOVING\_CAR\_SYSTEM\_PUSH\_BUTTON\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}../../MCAL/DIO/dio.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}../../Utilities/common\_macros.h"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} EN\_PB\_API\_STATE \{}
+\DoxyCodeLine{8     PB\_SUCCESS = 0, PB\_PORT\_INVALID, PB\_DIRECTION\_INVALID}
+\DoxyCodeLine{9 \}EN\_PB\_API\_STATE;}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{18 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_p_b___init__t}{PB\_Init\_t}} \{}
+\DoxyCodeLine{19     EN\_DIO\_PORT \mbox{\hyperlink{struct_p_b___init__t_a87ca291fc7704e77b6c77839090765b7}{port}};}
+\DoxyCodeLine{20     EN\_DIO\_PIN pin;}
+\DoxyCodeLine{21     uint8 pb\_status;}
+\DoxyCodeLine{22 \}\mbox{\hyperlink{struct_p_b___init__t}{PB\_Init\_t}};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{28 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} EN\_PB\_LEVEL \{}
+\DoxyCodeLine{29     PB\_LOW = 0, PB\_HIGH}
+\DoxyCodeLine{30 \}EN\_PB\_LEVEL;}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{36 EN\_PB\_API\_STATE PB\_Init(\mbox{\hyperlink{struct_p_b___init__t}{PB\_Init\_t}} *p\_pb\_config\_struct);}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{43 EN\_PB\_API\_STATE PB\_ReadState(\mbox{\hyperlink{struct_p_b___init__t}{PB\_Init\_t}} *p\_pb\_config\_struct);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MOVING\_CAR\_SYSTEM\_PUSH\_BUTTON\_H}}
+
+\end{DoxyCode}

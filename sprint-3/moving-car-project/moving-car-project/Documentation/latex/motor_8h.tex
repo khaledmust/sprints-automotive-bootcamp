@@ -1,0 +1,152 @@
+\hypertarget{motor_8h}{}\doxysection{ECUAL/\+Motor/motor.h File Reference}
+\label{motor_8h}\index{ECUAL/Motor/motor.h@{ECUAL/Motor/motor.h}}
+{\ttfamily \#include \char`\"{}../../\+MCAL/\+DIO/dio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../\+MCAL/\+Timer/timer.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_m_o_t_o_r___init__t}{MOTOR\+\_\+\+Init\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_m_o_t_o_r___init__t}{MOTOR\+\_\+\+Init\+\_\+t}} \mbox{\hyperlink{motor_8h_ab22985006a8b220ea9df6aa59f6872a1}{MOTOR\+\_\+\+Init\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{motor_8h_af758c251f56d422ba1fb791aa0be9951}{EN\+\_\+\+MOTOR\+\_\+\+Direction}} \mbox{\hyperlink{motor_8h_a6e2c6ab6edc89412c02f084401d9c5ff}{EN\+\_\+\+MOTOR\+\_\+\+Direction}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{motor_8h_af758c251f56d422ba1fb791aa0be9951}{EN\+\_\+\+MOTOR\+\_\+\+Direction}} \{ \mbox{\hyperlink{motor_8h_af758c251f56d422ba1fb791aa0be9951a9d07bb3abb37dd009c410769de235419}{CW}} = 0
+, \mbox{\hyperlink{motor_8h_af758c251f56d422ba1fb791aa0be9951a896dd0842cf7e102469756cf97117487}{CCW}}
+ \}
+\begin{DoxyCompactList}\small\item\em Specifies the direction of rotation of the motor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{motor_8h_a8bfff6ddc6a67bf507e2532c5df87f42}{MOTOR\+\_\+\+Init}} (\mbox{\hyperlink{struct_m_o_t_o_r___init__t}{MOTOR\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Initializes the state of the pin the motor is attached to. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{motor_8h_ac716b38beb3420e95fd55d19182ef3cc}{MOTOR\+\_\+\+Forward}} (\mbox{\hyperlink{struct_m_o_t_o_r___init__t}{MOTOR\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Moves the motor in the forward direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{motor_8h_abe390e894c33dbc8aed15f070a071f3a}{MOTOR\+\_\+\+Stop}} (\mbox{\hyperlink{struct_m_o_t_o_r___init__t}{MOTOR\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Stops the movement of the motors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{motor_8h_ae2c1c3d8cae446d990ed30302bf15986}{MOTOR\+\_\+\+Rotation}} (\mbox{\hyperlink{motor_8h_af758c251f56d422ba1fb791aa0be9951}{EN\+\_\+\+MOTOR\+\_\+\+Direction}} motor\+\_\+direction)
+\begin{DoxyCompactList}\small\item\em Rotates the motor is the specified direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{motor_8h_a88e65ebf5cbc46580abdc06b619e815d}{MOTOR\+\_\+\+Speed}} (uint8\+\_\+t speed)
+\begin{DoxyCompactList}\small\item\em Specifies the speed of the motor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{motor_8h_a6e2c6ab6edc89412c02f084401d9c5ff}\label{motor_8h_a6e2c6ab6edc89412c02f084401d9c5ff}} 
+\index{motor.h@{motor.h}!EN\_MOTOR\_Direction@{EN\_MOTOR\_Direction}}
+\index{EN\_MOTOR\_Direction@{EN\_MOTOR\_Direction}!motor.h@{motor.h}}
+\doxysubsubsection{\texorpdfstring{EN\_MOTOR\_Direction}{EN\_MOTOR\_Direction}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{motor_8h_af758c251f56d422ba1fb791aa0be9951}{EN\+\_\+\+MOTOR\+\_\+\+Direction}} \mbox{\hyperlink{motor_8h_af758c251f56d422ba1fb791aa0be9951}{EN\+\_\+\+MOTOR\+\_\+\+Direction}}}
+
+\mbox{\Hypertarget{motor_8h_ab22985006a8b220ea9df6aa59f6872a1}\label{motor_8h_ab22985006a8b220ea9df6aa59f6872a1}} 
+\index{motor.h@{motor.h}!MOTOR\_Init\_t@{MOTOR\_Init\_t}}
+\index{MOTOR\_Init\_t@{MOTOR\_Init\_t}!motor.h@{motor.h}}
+\doxysubsubsection{\texorpdfstring{MOTOR\_Init\_t}{MOTOR\_Init\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_m_o_t_o_r___init__t}{MOTOR\+\_\+\+Init\+\_\+t}} \mbox{\hyperlink{struct_m_o_t_o_r___init__t}{MOTOR\+\_\+\+Init\+\_\+t}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{motor_8h_af758c251f56d422ba1fb791aa0be9951}\label{motor_8h_af758c251f56d422ba1fb791aa0be9951}} 
+\index{motor.h@{motor.h}!EN\_MOTOR\_Direction@{EN\_MOTOR\_Direction}}
+\index{EN\_MOTOR\_Direction@{EN\_MOTOR\_Direction}!motor.h@{motor.h}}
+\doxysubsubsection{\texorpdfstring{EN\_MOTOR\_Direction}{EN\_MOTOR\_Direction}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{motor_8h_af758c251f56d422ba1fb791aa0be9951}{EN\+\_\+\+MOTOR\+\_\+\+Direction}}}
+
+
+
+Specifies the direction of rotation of the motor. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CW@{CW}!motor.h@{motor.h}}\index{motor.h@{motor.h}!CW@{CW}}}\mbox{\Hypertarget{motor_8h_af758c251f56d422ba1fb791aa0be9951a9d07bb3abb37dd009c410769de235419}\label{motor_8h_af758c251f56d422ba1fb791aa0be9951a9d07bb3abb37dd009c410769de235419}} 
+CW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CCW@{CCW}!motor.h@{motor.h}}\index{motor.h@{motor.h}!CCW@{CCW}}}\mbox{\Hypertarget{motor_8h_af758c251f56d422ba1fb791aa0be9951a896dd0842cf7e102469756cf97117487}\label{motor_8h_af758c251f56d422ba1fb791aa0be9951a896dd0842cf7e102469756cf97117487}} 
+CCW&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{motor_8h_ac716b38beb3420e95fd55d19182ef3cc}\label{motor_8h_ac716b38beb3420e95fd55d19182ef3cc}} 
+\index{motor.h@{motor.h}!MOTOR\_Forward@{MOTOR\_Forward}}
+\index{MOTOR\_Forward@{MOTOR\_Forward}!motor.h@{motor.h}}
+\doxysubsubsection{\texorpdfstring{MOTOR\_Forward()}{MOTOR\_Forward()}}
+{\footnotesize\ttfamily void MOTOR\+\_\+\+Forward (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_o_t_o_r___init__t}{MOTOR\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Moves the motor in the forward direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+config\+\_\+struct\mbox{[}in\mbox{]}} & Address of the configuration structure. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{motor_8h_a8bfff6ddc6a67bf507e2532c5df87f42}\label{motor_8h_a8bfff6ddc6a67bf507e2532c5df87f42}} 
+\index{motor.h@{motor.h}!MOTOR\_Init@{MOTOR\_Init}}
+\index{MOTOR\_Init@{MOTOR\_Init}!motor.h@{motor.h}}
+\doxysubsubsection{\texorpdfstring{MOTOR\_Init()}{MOTOR\_Init()}}
+{\footnotesize\ttfamily void MOTOR\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_o_t_o_r___init__t}{MOTOR\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Initializes the state of the pin the motor is attached to. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+config\+\_\+struct\mbox{[}in\mbox{]}} & Address of the configuration structure. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{motor_8h_ae2c1c3d8cae446d990ed30302bf15986}\label{motor_8h_ae2c1c3d8cae446d990ed30302bf15986}} 
+\index{motor.h@{motor.h}!MOTOR\_Rotation@{MOTOR\_Rotation}}
+\index{MOTOR\_Rotation@{MOTOR\_Rotation}!motor.h@{motor.h}}
+\doxysubsubsection{\texorpdfstring{MOTOR\_Rotation()}{MOTOR\_Rotation()}}
+{\footnotesize\ttfamily void MOTOR\+\_\+\+Rotation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{motor_8h_af758c251f56d422ba1fb791aa0be9951}{EN\+\_\+\+MOTOR\+\_\+\+Direction}}}]{motor\+\_\+direction }\end{DoxyParamCaption})}
+
+
+
+Rotates the motor is the specified direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em motor\+\_\+direction} & Direction of the rotation. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{motor_8h_a88e65ebf5cbc46580abdc06b619e815d}\label{motor_8h_a88e65ebf5cbc46580abdc06b619e815d}} 
+\index{motor.h@{motor.h}!MOTOR\_Speed@{MOTOR\_Speed}}
+\index{MOTOR\_Speed@{MOTOR\_Speed}!motor.h@{motor.h}}
+\doxysubsubsection{\texorpdfstring{MOTOR\_Speed()}{MOTOR\_Speed()}}
+{\footnotesize\ttfamily void MOTOR\+\_\+\+Speed (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{speed }\end{DoxyParamCaption})}
+
+
+
+Specifies the speed of the motor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed\mbox{[}in\mbox{]}} & The speed of the motor. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{motor_8h_abe390e894c33dbc8aed15f070a071f3a}\label{motor_8h_abe390e894c33dbc8aed15f070a071f3a}} 
+\index{motor.h@{motor.h}!MOTOR\_Stop@{MOTOR\_Stop}}
+\index{MOTOR\_Stop@{MOTOR\_Stop}!motor.h@{motor.h}}
+\doxysubsubsection{\texorpdfstring{MOTOR\_Stop()}{MOTOR\_Stop()}}
+{\footnotesize\ttfamily void MOTOR\+\_\+\+Stop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_o_t_o_r___init__t}{MOTOR\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Stops the movement of the motors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+config\+\_\+struct\mbox{[}in\mbox{]}} & Address of the configuration structure. \\
+\hline
+\end{DoxyParams}

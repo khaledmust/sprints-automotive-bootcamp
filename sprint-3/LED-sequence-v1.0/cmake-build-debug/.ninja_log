@@ -1,0 +1,14 @@
+# ninja log v5
+5	80	7025762765540210	CMakeFiles/LED_sequence_v1_0.dir/main.c.obj	d7664afd32aab3e2
+9	104	7025762765782109	CMakeFiles/LED_sequence_v1_0.dir/ECUAL/Push_Button/push_button.c.obj	4d1463d628edeab7
+0	106	7025762765812112	CMakeFiles/LED_sequence_v1_0.dir/ECUAL/LED/led.c.obj	e36608fee7a478cb
+14	114	7025762765902139	CMakeFiles/LED_sequence_v1_0.dir/MCAL/DIO/dio.c.obj	9af6a63792658aa9
+3	95	7025763029566298	CMakeFiles/LED_sequence_v1_0.dir/main.c.obj	d7664afd32aab3e2
+9	121	7025763029838208	CMakeFiles/LED_sequence_v1_0.dir/Application/led_sequence.c.obj	1f65895a716e23b8
+122	221	7025763030804576	LED_sequence_v1_0.exe	c6a9ea6c7218d08d
+8	88	7025795722703828	CMakeFiles/LED_sequence_v1_0.dir/main.c.obj	d7664afd32aab3e2
+18	122	7025795723014585	CMakeFiles/LED_sequence_v1_0.dir/ECUAL/Push_Button/push_button.c.obj	4d1463d628edeab7
+12	123	7025795723014585	CMakeFiles/LED_sequence_v1_0.dir/Application/led_sequence.c.obj	1f65895a716e23b8
+23	124	7025795723044574	CMakeFiles/LED_sequence_v1_0.dir/MCAL/DIO/dio.c.obj	9af6a63792658aa9
+3	164	7025795723459870	CMakeFiles/LED_sequence_v1_0.dir/ECUAL/LED/led.c.obj	e36608fee7a478cb
+164	350	7025795725287054	LED_sequence_v1_0.exe	c6a9ea6c7218d08d

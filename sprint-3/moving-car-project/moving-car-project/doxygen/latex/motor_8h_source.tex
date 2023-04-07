@@ -1,0 +1,34 @@
+\hypertarget{motor_8h_source}{}\doxysection{motor.\+h}
+\label{motor_8h_source}\index{ECUAL/Motor/motor.h@{ECUAL/Motor/motor.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MOVING\_CAR\_SYSTEM\_MOTOR\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MOVING\_CAR\_SYSTEM\_MOTOR\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}../../MCAL/DIO/dio.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}../../MCAL/Timer/timer.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}../../Utilities/std\_types.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{16 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_m_o_t_o_r___init__t}{MOTOR\_Init\_t}} \{}
+\DoxyCodeLine{17     EN\_DIO\_PORT \mbox{\hyperlink{struct_m_o_t_o_r___init__t_a88f2c597e625855de47afc8382cb637d}{port}};}
+\DoxyCodeLine{18     EN\_DIO\_PIN \mbox{\hyperlink{struct_m_o_t_o_r___init__t_ae8dec2298cc6a61c4c30d0ff09c09bed}{pin}};}
+\DoxyCodeLine{19 \}\mbox{\hyperlink{struct_m_o_t_o_r___init__t}{MOTOR\_Init\_t}};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{25 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} EN\_MOTOR\_Direction \{}
+\DoxyCodeLine{26     CW = 0, CCW}
+\DoxyCodeLine{27 \}EN\_MOTOR\_Direction;}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{33 \textcolor{keywordtype}{void} MOTOR\_Init(\mbox{\hyperlink{struct_m_o_t_o_r___init__t}{MOTOR\_Init\_t}} *p\_config\_struct);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{39 \textcolor{keywordtype}{void} MOTOR\_Forward(\mbox{\hyperlink{struct_m_o_t_o_r___init__t}{MOTOR\_Init\_t}} *p\_config\_struct);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{45 \textcolor{keywordtype}{void} MOTOR\_Stop(\mbox{\hyperlink{struct_m_o_t_o_r___init__t}{MOTOR\_Init\_t}} *p\_config\_struct);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{51 \textcolor{keywordtype}{void} MOTOR\_Rotation(EN\_MOTOR\_Direction motor\_direction);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{57 \textcolor{keywordtype}{void} MOTOR\_Speed(uint8 speed);}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MOVING\_CAR\_SYSTEM\_MOTOR\_H}}
+
+\end{DoxyCode}
