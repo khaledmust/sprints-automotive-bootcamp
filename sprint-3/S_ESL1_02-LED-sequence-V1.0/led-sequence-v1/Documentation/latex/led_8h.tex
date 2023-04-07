@@ -1,0 +1,79 @@
+\hypertarget{led_8h}{}\doxysection{ECUAL/\+LED/led.h File Reference}
+\label{led_8h}\index{ECUAL/LED/led.h@{ECUAL/LED/led.h}}
+{\ttfamily \#include \char`\"{}../../\+MCAL/\+DIO/dio.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Holds the port number and the pin number of the LED. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} \mbox{\hyperlink{led_8h_a68739c54ce1c4376fa0867bb2fc22375}{LED\+\_\+\+Init\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{led_8h_a20da6d411ec2f9f0862c334706d36552}{LED\+\_\+\+Init}} (\mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Initializes the pin attached to the LED. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{led_8h_ad623f89ad6485c4b0c639bc9e3ba76f1}{LED\+\_\+\+On}} (\mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Turns the LED on. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{led_8h_abddfae4ed8cf9395ea567e08c66098b6}{LED\+\_\+\+Off}} (\mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Turns the LED off. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{led_8h_a68739c54ce1c4376fa0867bb2fc22375}\label{led_8h_a68739c54ce1c4376fa0867bb2fc22375}} 
+\index{led.h@{led.h}!LED\_Init\_t@{LED\_Init\_t}}
+\index{LED\_Init\_t@{LED\_Init\_t}!led.h@{led.h}}
+\doxysubsubsection{\texorpdfstring{LED\_Init\_t}{LED\_Init\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} \mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{led_8h_a20da6d411ec2f9f0862c334706d36552}\label{led_8h_a20da6d411ec2f9f0862c334706d36552}} 
+\index{led.h@{led.h}!LED\_Init@{LED\_Init}}
+\index{LED\_Init@{LED\_Init}!led.h@{led.h}}
+\doxysubsubsection{\texorpdfstring{LED\_Init()}{LED\_Init()}}
+{\footnotesize\ttfamily void LED\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Initializes the pin attached to the LED. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+config\+\_\+struct} & Address of the configuration structure. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{led_8h_abddfae4ed8cf9395ea567e08c66098b6}\label{led_8h_abddfae4ed8cf9395ea567e08c66098b6}} 
+\index{led.h@{led.h}!LED\_Off@{LED\_Off}}
+\index{LED\_Off@{LED\_Off}!led.h@{led.h}}
+\doxysubsubsection{\texorpdfstring{LED\_Off()}{LED\_Off()}}
+{\footnotesize\ttfamily void LED\+\_\+\+Off (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Turns the LED off. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+config\+\_\+struct} & Address of the configuration structure. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{led_8h_ad623f89ad6485c4b0c639bc9e3ba76f1}\label{led_8h_ad623f89ad6485c4b0c639bc9e3ba76f1}} 
+\index{led.h@{led.h}!LED\_On@{LED\_On}}
+\index{LED\_On@{LED\_On}!led.h@{led.h}}
+\doxysubsubsection{\texorpdfstring{LED\_On()}{LED\_On()}}
+{\footnotesize\ttfamily void LED\+\_\+\+On (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Turns the LED on. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+config\+\_\+struct} & Address of the configuration structure. \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,103 @@
+\hypertarget{push__button_8h}{}\doxysection{ECUAL/\+Push\+\_\+button/push\+\_\+button.h File Reference}
+\label{push__button_8h}\index{ECUAL/Push\_button/push\_button.h@{ECUAL/Push\_button/push\_button.h}}
+{\ttfamily \#include \char`\"{}../../\+MCAL/\+DIO/dio.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_p_b___init__t}{PB\+\_\+\+Init\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_p_b___init__t}{PB\+\_\+\+Init\+\_\+t}} \mbox{\hyperlink{push__button_8h_afc67948122b73ce46b26a635d26f549d}{PB\+\_\+\+Init\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{push__button_8h_a913a20804ffc431dd645e22b49f519d2}{EN\+\_\+\+PB\+\_\+\+LEVEL}} \mbox{\hyperlink{push__button_8h_a98cea7370e1fdaff10ae6eef63f4ee4a}{EN\+\_\+\+PB\+\_\+\+LEVEL}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{push__button_8h_a913a20804ffc431dd645e22b49f519d2}{EN\+\_\+\+PB\+\_\+\+LEVEL}} \{ \mbox{\hyperlink{push__button_8h_a913a20804ffc431dd645e22b49f519d2a01cff6051f18b6a491b0e862f4bfdcde}{PB\+\_\+\+LOW}} = 0
+, \mbox{\hyperlink{push__button_8h_a913a20804ffc431dd645e22b49f519d2abd9cc810e58af1d307367f00512e1118}{PB\+\_\+\+HIGH}}
+ \}
+\begin{DoxyCompactList}\small\item\em Specifies the state of push button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{push__button_8h_aa98b5f387441764b06d5cd0778fa6b2e}{PB\+\_\+\+Init}} (\mbox{\hyperlink{struct_p_b___init__t}{PB\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Initializes the state of the pin connected to the push button. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{push__button_8h_a913a20804ffc431dd645e22b49f519d2}{EN\+\_\+\+PB\+\_\+\+LEVEL}} \mbox{\hyperlink{push__button_8h_a974fba8c90454729a60977451d0ea2f9}{PB\+\_\+\+Read\+State}} (\mbox{\hyperlink{struct_p_b___init__t}{PB\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Reads the current state of the push button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{push__button_8h_a98cea7370e1fdaff10ae6eef63f4ee4a}\label{push__button_8h_a98cea7370e1fdaff10ae6eef63f4ee4a}} 
+\index{push\_button.h@{push\_button.h}!EN\_PB\_LEVEL@{EN\_PB\_LEVEL}}
+\index{EN\_PB\_LEVEL@{EN\_PB\_LEVEL}!push\_button.h@{push\_button.h}}
+\doxysubsubsection{\texorpdfstring{EN\_PB\_LEVEL}{EN\_PB\_LEVEL}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{push__button_8h_a913a20804ffc431dd645e22b49f519d2}{EN\+\_\+\+PB\+\_\+\+LEVEL}} \mbox{\hyperlink{push__button_8h_a913a20804ffc431dd645e22b49f519d2}{EN\+\_\+\+PB\+\_\+\+LEVEL}}}
+
+\mbox{\Hypertarget{push__button_8h_afc67948122b73ce46b26a635d26f549d}\label{push__button_8h_afc67948122b73ce46b26a635d26f549d}} 
+\index{push\_button.h@{push\_button.h}!PB\_Init\_t@{PB\_Init\_t}}
+\index{PB\_Init\_t@{PB\_Init\_t}!push\_button.h@{push\_button.h}}
+\doxysubsubsection{\texorpdfstring{PB\_Init\_t}{PB\_Init\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_p_b___init__t}{PB\+\_\+\+Init\+\_\+t}} \mbox{\hyperlink{struct_p_b___init__t}{PB\+\_\+\+Init\+\_\+t}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{push__button_8h_a913a20804ffc431dd645e22b49f519d2}\label{push__button_8h_a913a20804ffc431dd645e22b49f519d2}} 
+\index{push\_button.h@{push\_button.h}!EN\_PB\_LEVEL@{EN\_PB\_LEVEL}}
+\index{EN\_PB\_LEVEL@{EN\_PB\_LEVEL}!push\_button.h@{push\_button.h}}
+\doxysubsubsection{\texorpdfstring{EN\_PB\_LEVEL}{EN\_PB\_LEVEL}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{push__button_8h_a913a20804ffc431dd645e22b49f519d2}{EN\+\_\+\+PB\+\_\+\+LEVEL}}}
+
+
+
+Specifies the state of push button. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PB\_LOW@{PB\_LOW}!push\_button.h@{push\_button.h}}\index{push\_button.h@{push\_button.h}!PB\_LOW@{PB\_LOW}}}\mbox{\Hypertarget{push__button_8h_a913a20804ffc431dd645e22b49f519d2a01cff6051f18b6a491b0e862f4bfdcde}\label{push__button_8h_a913a20804ffc431dd645e22b49f519d2a01cff6051f18b6a491b0e862f4bfdcde}} 
+PB\+\_\+\+LOW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PB\_HIGH@{PB\_HIGH}!push\_button.h@{push\_button.h}}\index{push\_button.h@{push\_button.h}!PB\_HIGH@{PB\_HIGH}}}\mbox{\Hypertarget{push__button_8h_a913a20804ffc431dd645e22b49f519d2abd9cc810e58af1d307367f00512e1118}\label{push__button_8h_a913a20804ffc431dd645e22b49f519d2abd9cc810e58af1d307367f00512e1118}} 
+PB\+\_\+\+HIGH&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{push__button_8h_aa98b5f387441764b06d5cd0778fa6b2e}\label{push__button_8h_aa98b5f387441764b06d5cd0778fa6b2e}} 
+\index{push\_button.h@{push\_button.h}!PB\_Init@{PB\_Init}}
+\index{PB\_Init@{PB\_Init}!push\_button.h@{push\_button.h}}
+\doxysubsubsection{\texorpdfstring{PB\_Init()}{PB\_Init()}}
+{\footnotesize\ttfamily void PB\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_p_b___init__t}{PB\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Initializes the state of the pin connected to the push button. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+config\+\_\+struct} & Address of the configuration structure. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{push__button_8h_a974fba8c90454729a60977451d0ea2f9}\label{push__button_8h_a974fba8c90454729a60977451d0ea2f9}} 
+\index{push\_button.h@{push\_button.h}!PB\_ReadState@{PB\_ReadState}}
+\index{PB\_ReadState@{PB\_ReadState}!push\_button.h@{push\_button.h}}
+\doxysubsubsection{\texorpdfstring{PB\_ReadState()}{PB\_ReadState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{push__button_8h_a913a20804ffc431dd645e22b49f519d2}{EN\+\_\+\+PB\+\_\+\+LEVEL}} PB\+\_\+\+Read\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_p_b___init__t}{PB\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Reads the current state of the push button. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+config\+\_\+struct} & Address of the configuration structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current state of the push button. 
+\end{DoxyReturn}
