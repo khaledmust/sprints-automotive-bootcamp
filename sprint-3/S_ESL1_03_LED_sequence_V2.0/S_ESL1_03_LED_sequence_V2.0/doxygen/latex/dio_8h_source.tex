@@ -1,0 +1,53 @@
+\hypertarget{dio_8h_source}{}\doxysection{dio.\+h}
+\label{dio_8h_source}\index{MCAL/DIO/dio.h@{MCAL/DIO/dio.h}}
+\mbox{\hyperlink{dio_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef MOVING\_CAR\_SYSTEM\_DIO\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define MOVING\_CAR\_SYSTEM\_DIO\_H}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}../../Utilities/registers.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}../../Utilities/std\_types.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}../../Utilities/common\_macros.h"{}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{13 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\_DIO\_ERROR\_STATE}} \{}
+\DoxyCodeLine{14     \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551a988d577884264a1af44d82a57d03c176}{DIO\_SUCCESS}} = 0, \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551a0a0a70988cb8d8cedb4df62429ccccdc}{DIO\_PORT\_INVALID}}, \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551a9a799e1e1a9c2a6755f15b10ae7455c4}{DIO\_DIRECTION\_INVALID}}, \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551acfac4d5e1e8415e820b2bbcce84e14c8}{DIO\_PIN\_INVALID}}}
+\DoxyCodeLine{15 \}\mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\_DIO\_ERROR\_STATE}};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{21 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \mbox{\hyperlink{dio_8h_a2fba50ffe1a228bb08f2c57cca07a226}{EN\_DIO\_DIRECTION}} \{}
+\DoxyCodeLine{22     \mbox{\hyperlink{dio_8h_a2fba50ffe1a228bb08f2c57cca07a226a99df54ee56f5a382d82021a4c76151a0}{DIO\_INPUT}} = 0, \mbox{\hyperlink{dio_8h_a2fba50ffe1a228bb08f2c57cca07a226a066013d99bf79a58f5bd736558b90e2c}{DIO\_OUTPUT}}}
+\DoxyCodeLine{23 \}\mbox{\hyperlink{dio_8h_a2fba50ffe1a228bb08f2c57cca07a226}{EN\_DIO\_DIRECTION}};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{29 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308}{EN\_DIO\_PIN}} \{}
+\DoxyCodeLine{30    \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308a302dbba83d47666da4b37e5a223105ec}{PIN0}} = 0, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308afa4ff3b5642cae54b83210fcce1c39ac}{PIN1}}, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308ae90c5a59f509ccf2ff2fab0a52a3774f}{PIN2}}, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308ace918dad9ed9de15eb1362c94b28feb4}{PIN3}}, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308a4a438ef04f4b0baa53c26cb6046c0973}{PIN4}}, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308aa2df961455bde47244aa7318d1c1bd51}{PIN5}}, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308a2a4f859ed8bfea5a9409e99dd7349558}{PIN6}}, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308a8aff7b07119bc9bc98d397b397dd30c7}{PIN7}}, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308ae3cd01a5599e6fb565ece7536303e797}{PIN8}}}
+\DoxyCodeLine{31 \}\mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308}{EN\_DIO\_PIN}};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{38 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635}{EN\_DIO\_PORT}} \{}
+\DoxyCodeLine{39     \mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635aeb6782d9dfedf3c6a78ffdb1624fa454}{PORT\_A}} = 0, \mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635a16ada472d473fbd0207b99e9e4d68f4a}{PORT\_B}}, \mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635a627cc690c37f97527dd2f07aa22092d9}{PORT\_C}}, \mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635af7242fe75227a46a190645663f91ce69}{PORT\_D}}}
+\DoxyCodeLine{40 \}\mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635}{EN\_DIO\_PORT}};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{46 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \mbox{\hyperlink{dio_8h_a21bdb33b88f0df02d37c7fd8dd05fee3}{EN\_DIO\_LEVEL}} \{}
+\DoxyCodeLine{47     \mbox{\hyperlink{dio_8h_a21bdb33b88f0df02d37c7fd8dd05fee3a37170fc54a8b1022c388eb53f5862306}{DIO\_LOW}} = 0, \mbox{\hyperlink{dio_8h_a21bdb33b88f0df02d37c7fd8dd05fee3a8037821f04472a22be2178ffc2883242}{DIO\_HIGH}}}
+\DoxyCodeLine{48 \}\mbox{\hyperlink{dio_8h_a21bdb33b88f0df02d37c7fd8dd05fee3}{EN\_DIO\_LEVEL}};}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{64 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\_Init\_t}} \{}
+\DoxyCodeLine{65     \mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635}{EN\_DIO\_PORT}} \mbox{\hyperlink{struct_d_i_o___init__t_af8fb0f45ee0195c7422a49e6a8d72369}{port}};}
+\DoxyCodeLine{66     \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308}{EN\_DIO\_PIN}} \mbox{\hyperlink{struct_d_i_o___init__t_aed45ca508d997dd992682abff8790bde}{pin}};}
+\DoxyCodeLine{67     \mbox{\hyperlink{dio_8h_a2fba50ffe1a228bb08f2c57cca07a226}{EN\_DIO\_DIRECTION}} \mbox{\hyperlink{struct_d_i_o___init__t_a99f26e6ee9fcd62f75203b5402df8098}{direction}};}
+\DoxyCodeLine{68     \textcolor{keyword}{union }\{}
+\DoxyCodeLine{69         \mbox{\hyperlink{group__std_types_gadde6aaee8457bee49c2a92621fe22b79}{uint8}} \mbox{\hyperlink{struct_d_i_o___init__t_a41323ac92e833134f520f62a4513fe70}{pin\_value}};}
+\DoxyCodeLine{70         \mbox{\hyperlink{group__std_types_gadde6aaee8457bee49c2a92621fe22b79}{uint8}} \mbox{\hyperlink{struct_d_i_o___init__t_a31eab96a3b0d9a1d6979995a0c6c3737}{port\_value}};}
+\DoxyCodeLine{71     \};}
+\DoxyCodeLine{72 \}\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\_Init\_t}};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{80 \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\_DIO\_ERROR\_STATE}} \mbox{\hyperlink{dio_8h_abdcd89d167b8af73719c960ee9900009}{DIO\_Init}}(\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\_Init\_t}} *p\_config\_struct);}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{89 \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\_DIO\_ERROR\_STATE}} \mbox{\hyperlink{dio_8h_aafcf464b7e892dc654904247fb154977}{DIO\_ReadPin}}(\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\_Init\_t}} *p\_config\_struct);}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{98 \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\_DIO\_ERROR\_STATE}} \mbox{\hyperlink{dio_8h_a68dfe65a76698be316ea66324b43835f}{DIO\_WritePin}}(\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\_Init\_t}} *p\_config\_struct);}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{107 \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\_DIO\_ERROR\_STATE}} \mbox{\hyperlink{dio_8h_ac2e3fbe80a9519bdedc61b047b2aae95}{DIO\_TogglePin}}(\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\_Init\_t}} *p\_config\_struct);}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MOVING\_CAR\_SYSTEM\_DIO\_H}}
+
+\end{DoxyCode}

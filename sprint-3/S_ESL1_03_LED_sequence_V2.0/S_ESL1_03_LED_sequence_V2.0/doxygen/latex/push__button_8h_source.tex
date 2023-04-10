@@ -1,0 +1,31 @@
+\hypertarget{push__button_8h_source}{}\doxysection{push\+\_\+button.\+h}
+\label{push__button_8h_source}\index{ECUAL/Push\_Button/push\_button.h@{ECUAL/Push\_Button/push\_button.h}}
+\mbox{\hyperlink{push__button_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MOVING\_CAR\_SYSTEM\_PUSH\_BUTTON\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MOVING\_CAR\_SYSTEM\_PUSH\_BUTTON\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}../../MCAL/DIO/dio.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}../../Utilities/common\_macros.h"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{11 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \mbox{\hyperlink{push__button_8h_ac2e0cea60a7fd19a0178aee380d62329}{EN\_PB\_API\_STATE}} \{}
+\DoxyCodeLine{12     \mbox{\hyperlink{push__button_8h_ac2e0cea60a7fd19a0178aee380d62329a2d6ce992f9aadda0f77e4c95aeb464d5}{PB\_SUCCESS}} = 0, \mbox{\hyperlink{push__button_8h_ac2e0cea60a7fd19a0178aee380d62329a09e9715f7bae6fea8350b2b666db33d7}{PB\_PORT\_INVALID}}, \mbox{\hyperlink{push__button_8h_ac2e0cea60a7fd19a0178aee380d62329a01b40aeabe9b73fe396d24c6ed609e96}{PB\_DIRECTION\_INVALID}}}
+\DoxyCodeLine{13 \}\mbox{\hyperlink{push__button_8h_ac2e0cea60a7fd19a0178aee380d62329}{EN\_PB\_API\_STATE}};}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{19 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \mbox{\hyperlink{push__button_8h_a913a20804ffc431dd645e22b49f519d2}{EN\_PB\_LEVEL}} \{}
+\DoxyCodeLine{20     \mbox{\hyperlink{push__button_8h_a913a20804ffc431dd645e22b49f519d2a01cff6051f18b6a491b0e862f4bfdcde}{PB\_LOW}} = 0, \mbox{\hyperlink{push__button_8h_a913a20804ffc431dd645e22b49f519d2abd9cc810e58af1d307367f00512e1118}{PB\_HIGH}}}
+\DoxyCodeLine{21 \}\mbox{\hyperlink{push__button_8h_a913a20804ffc431dd645e22b49f519d2}{EN\_PB\_LEVEL}};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{30 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_p_b___init__t}{PB\_Init\_t}} \{}
+\DoxyCodeLine{31     \mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635}{EN\_DIO\_PORT}} \mbox{\hyperlink{struct_p_b___init__t_af8fb0f45ee0195c7422a49e6a8d72369}{port}};}
+\DoxyCodeLine{32     \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308}{EN\_DIO\_PIN}} \mbox{\hyperlink{struct_p_b___init__t_a60a7528b17f719c3b48a478055ba09be}{pin}};}
+\DoxyCodeLine{33     \mbox{\hyperlink{group__std_types_gadde6aaee8457bee49c2a92621fe22b79}{uint8}} \mbox{\hyperlink{struct_p_b___init__t_a322aa793d063dc896a531e9aaccb642e}{pb\_status}};}
+\DoxyCodeLine{34 \}\mbox{\hyperlink{struct_p_b___init__t}{PB\_Init\_t}};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{40 \mbox{\hyperlink{push__button_8h_ac2e0cea60a7fd19a0178aee380d62329}{EN\_PB\_API\_STATE}} \mbox{\hyperlink{push__button_8h_a65d6dd3fbf395cf7f4e5325e908c0166}{PB\_Init}}(\mbox{\hyperlink{struct_p_b___init__t}{PB\_Init\_t}} *p\_pb\_config\_struct);}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{48 \mbox{\hyperlink{push__button_8h_ac2e0cea60a7fd19a0178aee380d62329}{EN\_PB\_API\_STATE}} \mbox{\hyperlink{push__button_8h_aba3544ea6efa2ef2bb0e9188bab0f6e0}{PB\_ReadState}}(\mbox{\hyperlink{struct_p_b___init__t}{PB\_Init\_t}} *p\_pb\_config\_struct);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MOVING\_CAR\_SYSTEM\_PUSH\_BUTTON\_H}}
+
+\end{DoxyCode}

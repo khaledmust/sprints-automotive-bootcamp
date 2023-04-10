@@ -1,0 +1,57 @@
+\hypertarget{push__button_8c}{}\doxysection{ECUAL/\+Push\+\_\+\+Button/push\+\_\+button.c File Reference}
+\label{push__button_8c}\index{ECUAL/Push\_Button/push\_button.c@{ECUAL/Push\_Button/push\_button.c}}
+{\ttfamily \#include \char`\"{}push\+\_\+button.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{push__button_8h_ac2e0cea60a7fd19a0178aee380d62329}{EN\+\_\+\+PB\+\_\+\+API\+\_\+\+STATE}} \mbox{\hyperlink{push__button_8c_a65d6dd3fbf395cf7f4e5325e908c0166}{PB\+\_\+\+Init}} (\mbox{\hyperlink{struct_p_b___init__t}{PB\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+pb\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Initializes the state of the pin connected to the push button. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{push__button_8h_ac2e0cea60a7fd19a0178aee380d62329}{EN\+\_\+\+PB\+\_\+\+API\+\_\+\+STATE}} \mbox{\hyperlink{push__button_8c_aba3544ea6efa2ef2bb0e9188bab0f6e0}{PB\+\_\+\+Read\+State}} (\mbox{\hyperlink{struct_p_b___init__t}{PB\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+pb\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Reads the current state of the push button. The function works by reading the value of the specified bit from the PIN port and then writes the state of that bit to the \textquotesingle{}pb\+\_\+status\textquotesingle{} member of the \mbox{\hyperlink{struct_p_b___init__t}{PB\+\_\+\+Init\+\_\+t}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{push__button_8c_a65d6dd3fbf395cf7f4e5325e908c0166}\label{push__button_8c_a65d6dd3fbf395cf7f4e5325e908c0166}} 
+\index{push\_button.c@{push\_button.c}!PB\_Init@{PB\_Init}}
+\index{PB\_Init@{PB\_Init}!push\_button.c@{push\_button.c}}
+\doxysubsubsection{\texorpdfstring{PB\_Init()}{PB\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{push__button_8h_ac2e0cea60a7fd19a0178aee380d62329}{EN\+\_\+\+PB\+\_\+\+API\+\_\+\+STATE}} PB\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_p_b___init__t}{PB\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+pb\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Initializes the state of the pin connected to the push button. 
+
+
+\begin{DoxyItemize}
+\item The function declares a \mbox{\hyperlink{struct_d_i_o___init__t}{DIO\+\_\+\+Init\+\_\+t}} variable and extract the port and the pin from the p\+\_\+pb\+\_\+config\+\_\+struct, with a constant value for the \textquotesingle{}direction\textquotesingle{} member as DIO\+\_\+\+INPUT.
+\item Then it calls DIO\+\_\+\+Init function. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+config\+\_\+struct} & Address of the configuration structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+PB\+\_\+\+SUCCESS 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\mbox{\Hypertarget{push__button_8c_aba3544ea6efa2ef2bb0e9188bab0f6e0}\label{push__button_8c_aba3544ea6efa2ef2bb0e9188bab0f6e0}} 
+\index{push\_button.c@{push\_button.c}!PB\_ReadState@{PB\_ReadState}}
+\index{PB\_ReadState@{PB\_ReadState}!push\_button.c@{push\_button.c}}
+\doxysubsubsection{\texorpdfstring{PB\_ReadState()}{PB\_ReadState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{push__button_8h_ac2e0cea60a7fd19a0178aee380d62329}{EN\+\_\+\+PB\+\_\+\+API\+\_\+\+STATE}} PB\+\_\+\+Read\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_p_b___init__t}{PB\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+pb\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Reads the current state of the push button. The function works by reading the value of the specified bit from the PIN port and then writes the state of that bit to the \textquotesingle{}pb\+\_\+status\textquotesingle{} member of the \mbox{\hyperlink{struct_p_b___init__t}{PB\+\_\+\+Init\+\_\+t}}. 
+
+Reads the current state of the push button.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}in/out\mbox{]}} & p\+\_\+config\+\_\+struct Address of the configuration structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+PB\+\_\+\+PORT\+\_\+\+INVALID The selected port doesn\textquotesingle{}t corresponds to the MCU ports. 
+
+PB\+\_\+\+SUCCESS 
+\end{DoxyReturn}

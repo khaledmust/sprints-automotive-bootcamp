@@ -1,0 +1,32 @@
+\hypertarget{led_8h_source}{}\doxysection{led.\+h}
+\label{led_8h_source}\index{ECUAL/LED/led.h@{ECUAL/LED/led.h}}
+\mbox{\hyperlink{led_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MOVING\_CAR\_SYSTEM\_LED\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MOVING\_CAR\_SYSTEM\_LED\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}../../MCAL/DIO/dio.h"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{10 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8a}{EN\_LED\_API\_STATE}} \{}
+\DoxyCodeLine{11     \mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8aadc85ff35a4c95986362533c5fb443597}{LED\_SUCCESS}} = 0, \mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8aadc12719abd09a864048a0c7f9eb314b0}{LED\_PORT\_INVALID}}, \mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8aa333497b21d9864fb6ab78ff393db4deb}{LED\_STATUS\_INVALID}}}
+\DoxyCodeLine{12 \}\mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8a}{EN\_LED\_API\_STATE}};}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{18 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \mbox{\hyperlink{led_8h_a586437d289fd5cc05f6b59485970f3b5}{EN\_LED\_STATUS}} \{}
+\DoxyCodeLine{19     \mbox{\hyperlink{led_8h_a586437d289fd5cc05f6b59485970f3b5afc0ca8cc6cbe215fd3f1ae6d40255b40}{LED\_OFF}} = 0, \mbox{\hyperlink{led_8h_a586437d289fd5cc05f6b59485970f3b5add01b80eb93658fb4cf7eb9aceb89a1d}{LED\_ON}}}
+\DoxyCodeLine{20 \}\mbox{\hyperlink{led_8h_a586437d289fd5cc05f6b59485970f3b5}{EN\_LED\_STATUS}};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{32 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_l_e_d___init__t}{LED\_Init\_t}} \{}
+\DoxyCodeLine{33     \mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635}{EN\_DIO\_PORT}} \mbox{\hyperlink{struct_l_e_d___init__t_af8fb0f45ee0195c7422a49e6a8d72369}{port}};}
+\DoxyCodeLine{34     \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308}{EN\_DIO\_PIN}} \mbox{\hyperlink{struct_l_e_d___init__t_aed45ca508d997dd992682abff8790bde}{pin}};}
+\DoxyCodeLine{35     \mbox{\hyperlink{led_8h_a586437d289fd5cc05f6b59485970f3b5}{EN\_LED\_STATUS}} \mbox{\hyperlink{struct_l_e_d___init__t_a7a756d34bcea5568484bed930f870f0b}{led\_status}};}
+\DoxyCodeLine{36 \}\mbox{\hyperlink{struct_l_e_d___init__t}{LED\_Init\_t}};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{43 \mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8a}{EN\_LED\_API\_STATE}} \mbox{\hyperlink{led_8h_aacafb4f80aabf9bd3e02e8a1d79b3d34}{LED\_Init}}(\mbox{\hyperlink{struct_l_e_d___init__t}{LED\_Init\_t}} *p\_led\_config\_struct);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{52 \mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8a}{EN\_LED\_API\_STATE}} \mbox{\hyperlink{led_8h_a243a59e0487a1ca50e4f14a6064c526e}{LED\_On}}(\mbox{\hyperlink{struct_l_e_d___init__t}{LED\_Init\_t}} *p\_led\_config\_struct);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{61 \mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8a}{EN\_LED\_API\_STATE}} \mbox{\hyperlink{led_8h_a84bfbb4c8f69771c54feefbc0e93f3b3}{LED\_Off}}(\mbox{\hyperlink{struct_l_e_d___init__t}{LED\_Init\_t}} *p\_led\_config\_struct);}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MOVING\_CAR\_SYSTEM\_LED\_H}}
+
+\end{DoxyCode}

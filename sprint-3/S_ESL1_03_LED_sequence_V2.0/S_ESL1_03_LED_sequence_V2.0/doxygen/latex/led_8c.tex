@@ -1,0 +1,82 @@
+\hypertarget{led_8c}{}\doxysection{ECUAL/\+LED/led.c File Reference}
+\label{led_8c}\index{ECUAL/LED/led.c@{ECUAL/LED/led.c}}
+{\ttfamily \#include \char`\"{}led.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8a}{EN\+\_\+\+LED\+\_\+\+API\+\_\+\+STATE}} \mbox{\hyperlink{led_8c_aacafb4f80aabf9bd3e02e8a1d79b3d34}{LED\+\_\+\+Init}} (\mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+led\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Initializes the pin attached to the LED. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8a}{EN\+\_\+\+LED\+\_\+\+API\+\_\+\+STATE}} \mbox{\hyperlink{led_8c_a243a59e0487a1ca50e4f14a6064c526e}{LED\+\_\+\+On}} (\mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+led\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Turns the LED on. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8a}{EN\+\_\+\+LED\+\_\+\+API\+\_\+\+STATE}} \mbox{\hyperlink{led_8c_a84bfbb4c8f69771c54feefbc0e93f3b3}{LED\+\_\+\+Off}} (\mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+led\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Turns the LED off. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{led_8c_aacafb4f80aabf9bd3e02e8a1d79b3d34}\label{led_8c_aacafb4f80aabf9bd3e02e8a1d79b3d34}} 
+\index{led.c@{led.c}!LED\_Init@{LED\_Init}}
+\index{LED\_Init@{LED\_Init}!led.c@{led.c}}
+\doxysubsubsection{\texorpdfstring{LED\_Init()}{LED\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8a}{EN\+\_\+\+LED\+\_\+\+API\+\_\+\+STATE}} LED\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+led\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Initializes the pin attached to the LED. 
+
+
+\begin{DoxyItemize}
+\item The function declares a \mbox{\hyperlink{struct_d_i_o___init__t}{DIO\+\_\+\+Init\+\_\+t}} variable and extract the port and the pin from the p\+\_\+led\+\_\+config\+\_\+struct, with a constant value for the \textquotesingle{}direction\textquotesingle{} member as DIO\+\_\+\+OUTPUT.
+\item Then it calls DIO\+\_\+\+Init function.
+\item The initial status of the LED is then checked and accordingly it\textquotesingle{}s set. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+config\+\_\+struct} & Address of the configuration structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LED\+\_\+\+SUCCESS Initialization is done successfully. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\mbox{\Hypertarget{led_8c_a84bfbb4c8f69771c54feefbc0e93f3b3}\label{led_8c_a84bfbb4c8f69771c54feefbc0e93f3b3}} 
+\index{led.c@{led.c}!LED\_Off@{LED\_Off}}
+\index{LED\_Off@{LED\_Off}!led.c@{led.c}}
+\doxysubsubsection{\texorpdfstring{LED\_Off()}{LED\_Off()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8a}{EN\+\_\+\+LED\+\_\+\+API\+\_\+\+STATE}} LED\+\_\+\+Off (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+led\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Turns the LED off. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+led\+\_\+config\+\_\+struct} & The function first checks if the status of the led, an accordingly turns on the LED. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LED\+\_\+\+PORT\+\_\+\+INVALID 
+
+LED\+\_\+\+STATUS\+\_\+\+INVALID 
+
+LED\+\_\+\+SUCCESS 
+\end{DoxyReturn}
+\mbox{\Hypertarget{led_8c_a243a59e0487a1ca50e4f14a6064c526e}\label{led_8c_a243a59e0487a1ca50e4f14a6064c526e}} 
+\index{led.c@{led.c}!LED\_On@{LED\_On}}
+\index{LED\_On@{LED\_On}!led.c@{led.c}}
+\doxysubsubsection{\texorpdfstring{LED\_On()}{LED\_On()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8a}{EN\+\_\+\+LED\+\_\+\+API\+\_\+\+STATE}} LED\+\_\+\+On (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+led\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Turns the LED on. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+led\+\_\+config\+\_\+struct} & The function first checks if the status of the led, an accordingly turns on the LED. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LED\+\_\+\+PORT\+\_\+\+INVALID 
+
+LED\+\_\+\+STATUS\+\_\+\+INVALID 
+
+LED\+\_\+\+SUCCESS 
+\end{DoxyReturn}

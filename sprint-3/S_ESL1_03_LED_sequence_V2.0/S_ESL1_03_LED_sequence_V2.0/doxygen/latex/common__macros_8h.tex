@@ -1,0 +1,92 @@
+\hypertarget{common__macros_8h}{}\doxysection{Utilities/common\+\_\+macros.h File Reference}
+\label{common__macros_8h}\index{Utilities/common\_macros.h@{Utilities/common\_macros.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{common__macros_8h_a26474f43799fbade9cf300e21dd3a91a}{SET\+\_\+\+BIT}}(REG,  BIT)~(REG$\vert$=(1$<$$<$BIT))
+\begin{DoxyCompactList}\small\item\em Set a specific bit in the REG register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{common__macros_8h_a133aae6fc0d41bffab39ab223a7001de}{CLEAR\+\_\+\+BIT}}(REG,  BIT)~(REG\&=($\sim$(1$<$$<$BIT)))
+\begin{DoxyCompactList}\small\item\em Clear a specific bit in the REG register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{common__macros_8h_ae335be8e8dc374dc7075fe9b6a410efd}{TOGGLE\+\_\+\+BIT}}(REG,  BIT)~(REG$^\wedge$=(1$<$$<$BIT))
+\begin{DoxyCompactList}\small\item\em Toggle a specific bit in the REG register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{common__macros_8h_a7f8874337b74eb89e5de9c68325d581d}{BIT\+\_\+\+IS\+\_\+\+SET}}(REG,  BIT)~( REG \& (1$<$$<$BIT) )
+\begin{DoxyCompactList}\small\item\em Check if a specific bit is set in the REG register and return true if yes. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{common__macros_8h_af4d3be1ad5094302bf56b54bbc872e95}{BIT\+\_\+\+IS\+\_\+\+CLEAR}}(REG,  BIT)~( !(REG \& (1$<$$<$BIT)) )
+\begin{DoxyCompactList}\small\item\em Check if a specific bit is cleared in the REG register and return true if yes. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{common__macros_8h_aad5ebd34cb344c26ac87594f79b06b73}{sei}}()~\+\_\+\+\_\+asm\+\_\+\+\_\+ \+\_\+\+\_\+volatile\+\_\+\+\_\+ (\char`\"{}sei\char`\"{} \+::: \char`\"{}memory\char`\"{})
+\begin{DoxyCompactList}\small\item\em Enables global interrupts, by setting I-\/bit in status register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{common__macros_8h_a68c330e94fe121eba993e5a5973c3162}{cli}}()~\+\_\+\+\_\+asm\+\_\+\+\_\+ \+\_\+\+\_\+volatile\+\_\+\+\_\+ (\char`\"{}cli\char`\"{} \+::: \char`\"{}memory\char`\"{})
+\begin{DoxyCompactList}\small\item\em Disables global interrupts, by clearing I-\/bit in status register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{common__macros_8h_af4d3be1ad5094302bf56b54bbc872e95}\label{common__macros_8h_af4d3be1ad5094302bf56b54bbc872e95}} 
+\index{common\_macros.h@{common\_macros.h}!BIT\_IS\_CLEAR@{BIT\_IS\_CLEAR}}
+\index{BIT\_IS\_CLEAR@{BIT\_IS\_CLEAR}!common\_macros.h@{common\_macros.h}}
+\doxysubsubsection{\texorpdfstring{BIT\_IS\_CLEAR}{BIT\_IS\_CLEAR}}
+{\footnotesize\ttfamily \#define BIT\+\_\+\+IS\+\_\+\+CLEAR(\begin{DoxyParamCaption}\item[{}]{REG,  }\item[{}]{BIT }\end{DoxyParamCaption})~( !(REG \& (1$<$$<$BIT)) )}
+
+
+
+Check if a specific bit is cleared in the REG register and return true if yes. 
+
+\mbox{\Hypertarget{common__macros_8h_a7f8874337b74eb89e5de9c68325d581d}\label{common__macros_8h_a7f8874337b74eb89e5de9c68325d581d}} 
+\index{common\_macros.h@{common\_macros.h}!BIT\_IS\_SET@{BIT\_IS\_SET}}
+\index{BIT\_IS\_SET@{BIT\_IS\_SET}!common\_macros.h@{common\_macros.h}}
+\doxysubsubsection{\texorpdfstring{BIT\_IS\_SET}{BIT\_IS\_SET}}
+{\footnotesize\ttfamily \#define BIT\+\_\+\+IS\+\_\+\+SET(\begin{DoxyParamCaption}\item[{}]{REG,  }\item[{}]{BIT }\end{DoxyParamCaption})~( REG \& (1$<$$<$BIT) )}
+
+
+
+Check if a specific bit is set in the REG register and return true if yes. 
+
+\mbox{\Hypertarget{common__macros_8h_a133aae6fc0d41bffab39ab223a7001de}\label{common__macros_8h_a133aae6fc0d41bffab39ab223a7001de}} 
+\index{common\_macros.h@{common\_macros.h}!CLEAR\_BIT@{CLEAR\_BIT}}
+\index{CLEAR\_BIT@{CLEAR\_BIT}!common\_macros.h@{common\_macros.h}}
+\doxysubsubsection{\texorpdfstring{CLEAR\_BIT}{CLEAR\_BIT}}
+{\footnotesize\ttfamily \#define CLEAR\+\_\+\+BIT(\begin{DoxyParamCaption}\item[{}]{REG,  }\item[{}]{BIT }\end{DoxyParamCaption})~(REG\&=($\sim$(1$<$$<$BIT)))}
+
+
+
+Clear a specific bit in the REG register. 
+
+\mbox{\Hypertarget{common__macros_8h_a68c330e94fe121eba993e5a5973c3162}\label{common__macros_8h_a68c330e94fe121eba993e5a5973c3162}} 
+\index{common\_macros.h@{common\_macros.h}!cli@{cli}}
+\index{cli@{cli}!common\_macros.h@{common\_macros.h}}
+\doxysubsubsection{\texorpdfstring{cli}{cli}}
+{\footnotesize\ttfamily \#define cli(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\+\_\+\+\_\+asm\+\_\+\+\_\+ \+\_\+\+\_\+volatile\+\_\+\+\_\+ (\char`\"{}cli\char`\"{} \+::: \char`\"{}memory\char`\"{})}
+
+
+
+Disables global interrupts, by clearing I-\/bit in status register. 
+
+\mbox{\Hypertarget{common__macros_8h_aad5ebd34cb344c26ac87594f79b06b73}\label{common__macros_8h_aad5ebd34cb344c26ac87594f79b06b73}} 
+\index{common\_macros.h@{common\_macros.h}!sei@{sei}}
+\index{sei@{sei}!common\_macros.h@{common\_macros.h}}
+\doxysubsubsection{\texorpdfstring{sei}{sei}}
+{\footnotesize\ttfamily \#define sei(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\+\_\+\+\_\+asm\+\_\+\+\_\+ \+\_\+\+\_\+volatile\+\_\+\+\_\+ (\char`\"{}sei\char`\"{} \+::: \char`\"{}memory\char`\"{})}
+
+
+
+Enables global interrupts, by setting I-\/bit in status register. 
+
+\mbox{\Hypertarget{common__macros_8h_a26474f43799fbade9cf300e21dd3a91a}\label{common__macros_8h_a26474f43799fbade9cf300e21dd3a91a}} 
+\index{common\_macros.h@{common\_macros.h}!SET\_BIT@{SET\_BIT}}
+\index{SET\_BIT@{SET\_BIT}!common\_macros.h@{common\_macros.h}}
+\doxysubsubsection{\texorpdfstring{SET\_BIT}{SET\_BIT}}
+{\footnotesize\ttfamily \#define SET\+\_\+\+BIT(\begin{DoxyParamCaption}\item[{}]{REG,  }\item[{}]{BIT }\end{DoxyParamCaption})~(REG$\vert$=(1$<$$<$BIT))}
+
+
+
+Set a specific bit in the REG register. 
+
+\mbox{\Hypertarget{common__macros_8h_ae335be8e8dc374dc7075fe9b6a410efd}\label{common__macros_8h_ae335be8e8dc374dc7075fe9b6a410efd}} 
+\index{common\_macros.h@{common\_macros.h}!TOGGLE\_BIT@{TOGGLE\_BIT}}
+\index{TOGGLE\_BIT@{TOGGLE\_BIT}!common\_macros.h@{common\_macros.h}}
+\doxysubsubsection{\texorpdfstring{TOGGLE\_BIT}{TOGGLE\_BIT}}
+{\footnotesize\ttfamily \#define TOGGLE\+\_\+\+BIT(\begin{DoxyParamCaption}\item[{}]{REG,  }\item[{}]{BIT }\end{DoxyParamCaption})~(REG$^\wedge$=(1$<$$<$BIT))}
+
+
+
+Toggle a specific bit in the REG register. 
+

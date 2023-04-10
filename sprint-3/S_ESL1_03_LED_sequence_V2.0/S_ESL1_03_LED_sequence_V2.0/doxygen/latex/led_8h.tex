@@ -1,0 +1,208 @@
+\hypertarget{led_8h}{}\doxysection{ECUAL/\+LED/led.h File Reference}
+\label{led_8h}\index{ECUAL/LED/led.h@{ECUAL/LED/led.h}}
+{\ttfamily \#include \char`\"{}../../\+MCAL/\+DIO/dio.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Holds the port number and the pin number of the LED. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8a}{EN\+\_\+\+LED\+\_\+\+API\+\_\+\+STATE}} \mbox{\hyperlink{led_8h_a32912be1528afc0d7bfe6761e4c1ab37}{EN\+\_\+\+LED\+\_\+\+API\+\_\+\+STATE}}
+\item 
+typedef enum \mbox{\hyperlink{led_8h_a586437d289fd5cc05f6b59485970f3b5}{EN\+\_\+\+LED\+\_\+\+STATUS}} \mbox{\hyperlink{led_8h_a64094c9940014768fa421dc7a841dea7}{EN\+\_\+\+LED\+\_\+\+STATUS}}
+\item 
+typedef struct \mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} \mbox{\hyperlink{led_8h_a68739c54ce1c4376fa0867bb2fc22375}{LED\+\_\+\+Init\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8a}{EN\+\_\+\+LED\+\_\+\+API\+\_\+\+STATE}} \{ \mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8aadc85ff35a4c95986362533c5fb443597}{LED\+\_\+\+SUCCESS}} = 0
+, \mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8aadc12719abd09a864048a0c7f9eb314b0}{LED\+\_\+\+PORT\+\_\+\+INVALID}}
+, \mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8aa333497b21d9864fb6ab78ff393db4deb}{LED\+\_\+\+STATUS\+\_\+\+INVALID}}
+ \}
+\begin{DoxyCompactList}\small\item\em Defines the state of LED functions. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{led_8h_a586437d289fd5cc05f6b59485970f3b5}{EN\+\_\+\+LED\+\_\+\+STATUS}} \{ \mbox{\hyperlink{led_8h_a586437d289fd5cc05f6b59485970f3b5afc0ca8cc6cbe215fd3f1ae6d40255b40}{LED\+\_\+\+OFF}} = 0
+, \mbox{\hyperlink{led_8h_a586437d289fd5cc05f6b59485970f3b5add01b80eb93658fb4cf7eb9aceb89a1d}{LED\+\_\+\+ON}}
+ \}
+\begin{DoxyCompactList}\small\item\em Defines the LED status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8a}{EN\+\_\+\+LED\+\_\+\+API\+\_\+\+STATE}} \mbox{\hyperlink{led_8h_aacafb4f80aabf9bd3e02e8a1d79b3d34}{LED\+\_\+\+Init}} (\mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+led\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Initializes the pin attached to the LED. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8a}{EN\+\_\+\+LED\+\_\+\+API\+\_\+\+STATE}} \mbox{\hyperlink{led_8h_a243a59e0487a1ca50e4f14a6064c526e}{LED\+\_\+\+On}} (\mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+led\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Turns the LED on. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8a}{EN\+\_\+\+LED\+\_\+\+API\+\_\+\+STATE}} \mbox{\hyperlink{led_8h_a84bfbb4c8f69771c54feefbc0e93f3b3}{LED\+\_\+\+Off}} (\mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+led\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Turns the LED off. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{led_8h_a32912be1528afc0d7bfe6761e4c1ab37}\label{led_8h_a32912be1528afc0d7bfe6761e4c1ab37}} 
+\index{led.h@{led.h}!EN\_LED\_API\_STATE@{EN\_LED\_API\_STATE}}
+\index{EN\_LED\_API\_STATE@{EN\_LED\_API\_STATE}!led.h@{led.h}}
+\doxysubsubsection{\texorpdfstring{EN\_LED\_API\_STATE}{EN\_LED\_API\_STATE}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8a}{EN\+\_\+\+LED\+\_\+\+API\+\_\+\+STATE}} \mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8a}{EN\+\_\+\+LED\+\_\+\+API\+\_\+\+STATE}}}
+
+\mbox{\Hypertarget{led_8h_a64094c9940014768fa421dc7a841dea7}\label{led_8h_a64094c9940014768fa421dc7a841dea7}} 
+\index{led.h@{led.h}!EN\_LED\_STATUS@{EN\_LED\_STATUS}}
+\index{EN\_LED\_STATUS@{EN\_LED\_STATUS}!led.h@{led.h}}
+\doxysubsubsection{\texorpdfstring{EN\_LED\_STATUS}{EN\_LED\_STATUS}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{led_8h_a586437d289fd5cc05f6b59485970f3b5}{EN\+\_\+\+LED\+\_\+\+STATUS}} \mbox{\hyperlink{led_8h_a586437d289fd5cc05f6b59485970f3b5}{EN\+\_\+\+LED\+\_\+\+STATUS}}}
+
+\mbox{\Hypertarget{led_8h_a68739c54ce1c4376fa0867bb2fc22375}\label{led_8h_a68739c54ce1c4376fa0867bb2fc22375}} 
+\index{led.h@{led.h}!LED\_Init\_t@{LED\_Init\_t}}
+\index{LED\_Init\_t@{LED\_Init\_t}!led.h@{led.h}}
+\doxysubsubsection{\texorpdfstring{LED\_Init\_t}{LED\_Init\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} \mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{led_8h_ae220193686eb21992dd33798b0db0c8a}\label{led_8h_ae220193686eb21992dd33798b0db0c8a}} 
+\index{led.h@{led.h}!EN\_LED\_API\_STATE@{EN\_LED\_API\_STATE}}
+\index{EN\_LED\_API\_STATE@{EN\_LED\_API\_STATE}!led.h@{led.h}}
+\doxysubsubsection{\texorpdfstring{EN\_LED\_API\_STATE}{EN\_LED\_API\_STATE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8a}{EN\+\_\+\+LED\+\_\+\+API\+\_\+\+STATE}}}
+
+
+
+Defines the state of LED functions. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LED\_SUCCESS@{LED\_SUCCESS}!led.h@{led.h}}\index{led.h@{led.h}!LED\_SUCCESS@{LED\_SUCCESS}}}\mbox{\Hypertarget{led_8h_ae220193686eb21992dd33798b0db0c8aadc85ff35a4c95986362533c5fb443597}\label{led_8h_ae220193686eb21992dd33798b0db0c8aadc85ff35a4c95986362533c5fb443597}} 
+LED\+\_\+\+SUCCESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LED\_PORT\_INVALID@{LED\_PORT\_INVALID}!led.h@{led.h}}\index{led.h@{led.h}!LED\_PORT\_INVALID@{LED\_PORT\_INVALID}}}\mbox{\Hypertarget{led_8h_ae220193686eb21992dd33798b0db0c8aadc12719abd09a864048a0c7f9eb314b0}\label{led_8h_ae220193686eb21992dd33798b0db0c8aadc12719abd09a864048a0c7f9eb314b0}} 
+LED\+\_\+\+PORT\+\_\+\+INVALID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LED\_STATUS\_INVALID@{LED\_STATUS\_INVALID}!led.h@{led.h}}\index{led.h@{led.h}!LED\_STATUS\_INVALID@{LED\_STATUS\_INVALID}}}\mbox{\Hypertarget{led_8h_ae220193686eb21992dd33798b0db0c8aa333497b21d9864fb6ab78ff393db4deb}\label{led_8h_ae220193686eb21992dd33798b0db0c8aa333497b21d9864fb6ab78ff393db4deb}} 
+LED\+\_\+\+STATUS\+\_\+\+INVALID&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{led_8h_a586437d289fd5cc05f6b59485970f3b5}\label{led_8h_a586437d289fd5cc05f6b59485970f3b5}} 
+\index{led.h@{led.h}!EN\_LED\_STATUS@{EN\_LED\_STATUS}}
+\index{EN\_LED\_STATUS@{EN\_LED\_STATUS}!led.h@{led.h}}
+\doxysubsubsection{\texorpdfstring{EN\_LED\_STATUS}{EN\_LED\_STATUS}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{led_8h_a586437d289fd5cc05f6b59485970f3b5}{EN\+\_\+\+LED\+\_\+\+STATUS}}}
+
+
+
+Defines the LED status. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LED\_OFF@{LED\_OFF}!led.h@{led.h}}\index{led.h@{led.h}!LED\_OFF@{LED\_OFF}}}\mbox{\Hypertarget{led_8h_a586437d289fd5cc05f6b59485970f3b5afc0ca8cc6cbe215fd3f1ae6d40255b40}\label{led_8h_a586437d289fd5cc05f6b59485970f3b5afc0ca8cc6cbe215fd3f1ae6d40255b40}} 
+LED\+\_\+\+OFF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LED\_ON@{LED\_ON}!led.h@{led.h}}\index{led.h@{led.h}!LED\_ON@{LED\_ON}}}\mbox{\Hypertarget{led_8h_a586437d289fd5cc05f6b59485970f3b5add01b80eb93658fb4cf7eb9aceb89a1d}\label{led_8h_a586437d289fd5cc05f6b59485970f3b5add01b80eb93658fb4cf7eb9aceb89a1d}} 
+LED\+\_\+\+ON&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{led_8h_aacafb4f80aabf9bd3e02e8a1d79b3d34}\label{led_8h_aacafb4f80aabf9bd3e02e8a1d79b3d34}} 
+\index{led.h@{led.h}!LED\_Init@{LED\_Init}}
+\index{LED\_Init@{LED\_Init}!led.h@{led.h}}
+\doxysubsubsection{\texorpdfstring{LED\_Init()}{LED\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8a}{EN\+\_\+\+LED\+\_\+\+API\+\_\+\+STATE}} LED\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+led\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Initializes the pin attached to the LED. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+config\+\_\+struct} & Address of the configuration structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LED\+\_\+\+SUCCESS Initialization is done successfully.
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item The function declares a \mbox{\hyperlink{struct_d_i_o___init__t}{DIO\+\_\+\+Init\+\_\+t}} variable and extract the port and the pin from the p\+\_\+led\+\_\+config\+\_\+struct, with a constant value for the \textquotesingle{}direction\textquotesingle{} member as DIO\+\_\+\+OUTPUT.
+\item Then it calls DIO\+\_\+\+Init function.
+\item The initial status of the LED is then checked and accordingly it\textquotesingle{}s set. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+config\+\_\+struct} & Address of the configuration structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LED\+\_\+\+SUCCESS Initialization is done successfully. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\mbox{\Hypertarget{led_8h_a84bfbb4c8f69771c54feefbc0e93f3b3}\label{led_8h_a84bfbb4c8f69771c54feefbc0e93f3b3}} 
+\index{led.h@{led.h}!LED\_Off@{LED\_Off}}
+\index{LED\_Off@{LED\_Off}!led.h@{led.h}}
+\doxysubsubsection{\texorpdfstring{LED\_Off()}{LED\_Off()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8a}{EN\+\_\+\+LED\+\_\+\+API\+\_\+\+STATE}} LED\+\_\+\+Off (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+led\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Turns the LED off. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+config\+\_\+struct} & Address of the configuration structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LED\+\_\+\+PORT\+\_\+\+INVALID 
+
+LED\+\_\+\+STATUS\+\_\+\+INVALID 
+
+LED\+\_\+\+SUCCESS
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+led\+\_\+config\+\_\+struct} & The function first checks if the status of the led, an accordingly turns on the LED. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LED\+\_\+\+PORT\+\_\+\+INVALID 
+
+LED\+\_\+\+STATUS\+\_\+\+INVALID 
+
+LED\+\_\+\+SUCCESS 
+\end{DoxyReturn}
+\mbox{\Hypertarget{led_8h_a243a59e0487a1ca50e4f14a6064c526e}\label{led_8h_a243a59e0487a1ca50e4f14a6064c526e}} 
+\index{led.h@{led.h}!LED\_On@{LED\_On}}
+\index{LED\_On@{LED\_On}!led.h@{led.h}}
+\doxysubsubsection{\texorpdfstring{LED\_On()}{LED\_On()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{led_8h_ae220193686eb21992dd33798b0db0c8a}{EN\+\_\+\+LED\+\_\+\+API\+\_\+\+STATE}} LED\+\_\+\+On (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+led\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Turns the LED on. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+config\+\_\+struct} & Address of the configuration structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LED\+\_\+\+PORT\+\_\+\+INVALID 
+
+LED\+\_\+\+STATUS\+\_\+\+INVALID 
+
+LED\+\_\+\+SUCCESS
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+led\+\_\+config\+\_\+struct} & The function first checks if the status of the led, an accordingly turns on the LED. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LED\+\_\+\+PORT\+\_\+\+INVALID 
+
+LED\+\_\+\+STATUS\+\_\+\+INVALID 
+
+LED\+\_\+\+SUCCESS 
+\end{DoxyReturn}

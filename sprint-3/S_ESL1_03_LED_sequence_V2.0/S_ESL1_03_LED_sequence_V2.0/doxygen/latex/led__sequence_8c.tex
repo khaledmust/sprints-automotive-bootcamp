@@ -1,0 +1,87 @@
+\hypertarget{led__sequence_8c}{}\doxysection{Application/led\+\_\+sequence.c File Reference}
+\label{led__sequence_8c}\index{Application/led\_sequence.c@{Application/led\_sequence.c}}
+{\ttfamily \#include \char`\"{}led\+\_\+sequence.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{led__sequence_8c_addb85a7e0623b5cc8008e1cbbf6d97fd}{APP\+\_\+\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the push button and the 4 LEDs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{led__sequence_8c_a3c9498eafcf71731991c0bb4be172046}{APP\+\_\+\+Start}} ()
+\begin{DoxyCompactList}\small\item\em Start the LED sequence application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} \mbox{\hyperlink{led__sequence_8c_a1f81de47e480fbe4ccc9552f089da9b8}{LED0}} = \{\mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635aeb6782d9dfedf3c6a78ffdb1624fa454}{PORT\+\_\+A}}, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308a302dbba83d47666da4b37e5a223105ec}{PIN0}}, \mbox{\hyperlink{led_8h_a586437d289fd5cc05f6b59485970f3b5afc0ca8cc6cbe215fd3f1ae6d40255b40}{LED\+\_\+\+OFF}}\}
+\item 
+\mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} \mbox{\hyperlink{led__sequence_8c_aadaa209d61dd2e4ee0ef7a60c7e6fbfb}{LED1}} = \{\mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635aeb6782d9dfedf3c6a78ffdb1624fa454}{PORT\+\_\+A}}, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308afa4ff3b5642cae54b83210fcce1c39ac}{PIN1}}, \mbox{\hyperlink{led_8h_a586437d289fd5cc05f6b59485970f3b5afc0ca8cc6cbe215fd3f1ae6d40255b40}{LED\+\_\+\+OFF}}\}
+\item 
+\mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} \mbox{\hyperlink{led__sequence_8c_a18b095100e7843d608b00ffb850464cf}{LED2}} = \{\mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635aeb6782d9dfedf3c6a78ffdb1624fa454}{PORT\+\_\+A}}, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308ae90c5a59f509ccf2ff2fab0a52a3774f}{PIN2}}, \mbox{\hyperlink{led_8h_a586437d289fd5cc05f6b59485970f3b5afc0ca8cc6cbe215fd3f1ae6d40255b40}{LED\+\_\+\+OFF}}\}
+\item 
+\mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} \mbox{\hyperlink{led__sequence_8c_ad3352391ae2fd59b283679b43f1e26ab}{LED3}} = \{\mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635aeb6782d9dfedf3c6a78ffdb1624fa454}{PORT\+\_\+A}}, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308ace918dad9ed9de15eb1362c94b28feb4}{PIN3}}, \mbox{\hyperlink{led_8h_a586437d289fd5cc05f6b59485970f3b5afc0ca8cc6cbe215fd3f1ae6d40255b40}{LED\+\_\+\+OFF}}\}
+\item 
+\mbox{\hyperlink{struct_p_b___init__t}{PB\+\_\+\+Init\+\_\+t}} \mbox{\hyperlink{led__sequence_8c_a849505ead5a4546fbf1feffaeb36a0af}{PB0}} = \{\mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635aeb6782d9dfedf3c6a78ffdb1624fa454}{PORT\+\_\+A}}, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308a4a438ef04f4b0baa53c26cb6046c0973}{PIN4}}, \mbox{\hyperlink{push__button_8h_a913a20804ffc431dd645e22b49f519d2abd9cc810e58af1d307367f00512e1118}{PB\+\_\+\+HIGH}}\}
+\item 
+\mbox{\hyperlink{group__std_types_gadde6aaee8457bee49c2a92621fe22b79}{uint8}} \mbox{\hyperlink{led__sequence_8c_a47fef5bc2f9222665614e54e33b4352b}{counter}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{led__sequence_8c_addb85a7e0623b5cc8008e1cbbf6d97fd}\label{led__sequence_8c_addb85a7e0623b5cc8008e1cbbf6d97fd}} 
+\index{led\_sequence.c@{led\_sequence.c}!APP\_Init@{APP\_Init}}
+\index{APP\_Init@{APP\_Init}!led\_sequence.c@{led\_sequence.c}}
+\doxysubsubsection{\texorpdfstring{APP\_Init()}{APP\_Init()}}
+{\footnotesize\ttfamily void APP\+\_\+\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the push button and the 4 LEDs. 
+
+\mbox{\Hypertarget{led__sequence_8c_a3c9498eafcf71731991c0bb4be172046}\label{led__sequence_8c_a3c9498eafcf71731991c0bb4be172046}} 
+\index{led\_sequence.c@{led\_sequence.c}!APP\_Start@{APP\_Start}}
+\index{APP\_Start@{APP\_Start}!led\_sequence.c@{led\_sequence.c}}
+\doxysubsubsection{\texorpdfstring{APP\_Start()}{APP\_Start()}}
+{\footnotesize\ttfamily void APP\+\_\+\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Start the LED sequence application. 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{led__sequence_8c_a47fef5bc2f9222665614e54e33b4352b}\label{led__sequence_8c_a47fef5bc2f9222665614e54e33b4352b}} 
+\index{led\_sequence.c@{led\_sequence.c}!counter@{counter}}
+\index{counter@{counter}!led\_sequence.c@{led\_sequence.c}}
+\doxysubsubsection{\texorpdfstring{counter}{counter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__std_types_gadde6aaee8457bee49c2a92621fe22b79}{uint8}} counter = 0}
+
+\mbox{\Hypertarget{led__sequence_8c_a1f81de47e480fbe4ccc9552f089da9b8}\label{led__sequence_8c_a1f81de47e480fbe4ccc9552f089da9b8}} 
+\index{led\_sequence.c@{led\_sequence.c}!LED0@{LED0}}
+\index{LED0@{LED0}!led\_sequence.c@{led\_sequence.c}}
+\doxysubsubsection{\texorpdfstring{LED0}{LED0}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} LED0 = \{\mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635aeb6782d9dfedf3c6a78ffdb1624fa454}{PORT\+\_\+A}}, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308a302dbba83d47666da4b37e5a223105ec}{PIN0}}, \mbox{\hyperlink{led_8h_a586437d289fd5cc05f6b59485970f3b5afc0ca8cc6cbe215fd3f1ae6d40255b40}{LED\+\_\+\+OFF}}\}}
+
+\mbox{\Hypertarget{led__sequence_8c_aadaa209d61dd2e4ee0ef7a60c7e6fbfb}\label{led__sequence_8c_aadaa209d61dd2e4ee0ef7a60c7e6fbfb}} 
+\index{led\_sequence.c@{led\_sequence.c}!LED1@{LED1}}
+\index{LED1@{LED1}!led\_sequence.c@{led\_sequence.c}}
+\doxysubsubsection{\texorpdfstring{LED1}{LED1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} LED1 = \{\mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635aeb6782d9dfedf3c6a78ffdb1624fa454}{PORT\+\_\+A}}, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308afa4ff3b5642cae54b83210fcce1c39ac}{PIN1}}, \mbox{\hyperlink{led_8h_a586437d289fd5cc05f6b59485970f3b5afc0ca8cc6cbe215fd3f1ae6d40255b40}{LED\+\_\+\+OFF}}\}}
+
+\mbox{\Hypertarget{led__sequence_8c_a18b095100e7843d608b00ffb850464cf}\label{led__sequence_8c_a18b095100e7843d608b00ffb850464cf}} 
+\index{led\_sequence.c@{led\_sequence.c}!LED2@{LED2}}
+\index{LED2@{LED2}!led\_sequence.c@{led\_sequence.c}}
+\doxysubsubsection{\texorpdfstring{LED2}{LED2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} LED2 = \{\mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635aeb6782d9dfedf3c6a78ffdb1624fa454}{PORT\+\_\+A}}, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308ae90c5a59f509ccf2ff2fab0a52a3774f}{PIN2}}, \mbox{\hyperlink{led_8h_a586437d289fd5cc05f6b59485970f3b5afc0ca8cc6cbe215fd3f1ae6d40255b40}{LED\+\_\+\+OFF}}\}}
+
+\mbox{\Hypertarget{led__sequence_8c_ad3352391ae2fd59b283679b43f1e26ab}\label{led__sequence_8c_ad3352391ae2fd59b283679b43f1e26ab}} 
+\index{led\_sequence.c@{led\_sequence.c}!LED3@{LED3}}
+\index{LED3@{LED3}!led\_sequence.c@{led\_sequence.c}}
+\doxysubsubsection{\texorpdfstring{LED3}{LED3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_l_e_d___init__t}{LED\+\_\+\+Init\+\_\+t}} LED3 = \{\mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635aeb6782d9dfedf3c6a78ffdb1624fa454}{PORT\+\_\+A}}, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308ace918dad9ed9de15eb1362c94b28feb4}{PIN3}}, \mbox{\hyperlink{led_8h_a586437d289fd5cc05f6b59485970f3b5afc0ca8cc6cbe215fd3f1ae6d40255b40}{LED\+\_\+\+OFF}}\}}
+
+\mbox{\Hypertarget{led__sequence_8c_a849505ead5a4546fbf1feffaeb36a0af}\label{led__sequence_8c_a849505ead5a4546fbf1feffaeb36a0af}} 
+\index{led\_sequence.c@{led\_sequence.c}!PB0@{PB0}}
+\index{PB0@{PB0}!led\_sequence.c@{led\_sequence.c}}
+\doxysubsubsection{\texorpdfstring{PB0}{PB0}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_b___init__t}{PB\+\_\+\+Init\+\_\+t}} PB0 = \{\mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635aeb6782d9dfedf3c6a78ffdb1624fa454}{PORT\+\_\+A}}, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308a4a438ef04f4b0baa53c26cb6046c0973}{PIN4}}, \mbox{\hyperlink{push__button_8h_a913a20804ffc431dd645e22b49f519d2abd9cc810e58af1d307367f00512e1118}{PB\+\_\+\+HIGH}}\}}
+

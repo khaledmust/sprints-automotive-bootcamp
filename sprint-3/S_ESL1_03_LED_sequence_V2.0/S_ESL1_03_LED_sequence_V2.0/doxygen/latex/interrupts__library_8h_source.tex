@@ -1,0 +1,54 @@
+\hypertarget{interrupts__library_8h_source}{}\doxysection{interrupts\+\_\+library.\+h}
+\label{interrupts__library_8h_source}\index{Interrupts\_Library/interrupts\_library.h@{Interrupts\_Library/interrupts\_library.h}}
+\mbox{\hyperlink{interrupts__library_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifndef INTERRUPTS\_LIBRARY\_H\_}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#define INTERRUPTS\_LIBRARY\_H\_}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define ISR(INT\_VECT) void INT\_VECT(void) \_\_attribute\_\_((signal,used));\(\backslash\)}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{void INT\_VECT}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define EXT\_INT0 \_\_vector\_1}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define EXT\_INT1 \_\_vector\_2}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define EXT\_INT2 \_\_vector\_3}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 }
+\DoxyCodeLine{33 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}{EN\_INT\_ERROR\_STATE}} \{}
+\DoxyCodeLine{34     \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1a4197c09e9075ad5e8ad90f57372bd739}{INT\_SUCCESS}} = 0, \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1ae0bd67ad37e6004eefd3e7969f76f1d5}{INT\_GLOBAL\_INT\_NOT\_SET}}, \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1afb8b403afaafa337ac0135ddabdcf3e4}{INT\_INVALID\_CONTROL}}, \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1aa0eaf8d9cd5b63efb2ff8e9375a98eb7}{INT\_INVALID\_EXTERNAL\_SRC}}}
+\DoxyCodeLine{35 \}\mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}{EN\_INT\_ERROR\_STATE}};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{41 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \mbox{\hyperlink{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863}{EN\_EXT\_INT\_SENSE\_CONTROL}} \{}
+\DoxyCodeLine{42     \mbox{\hyperlink{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863ab211cf14477a0a8c8a2d7a6c56d7a3ae}{LOW\_LEVEL}} = 0, \mbox{\hyperlink{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863a6c0e9a26245e0a910d51fbb63b24092d}{ANY\_LOGIC\_CHANGE}}, \mbox{\hyperlink{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863ab88c132109a78c131815f270b8bef045}{FALLING\_EDGE}}, \mbox{\hyperlink{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863a86445853271053ed37f404b9ca4fa434}{RISING\_EDGE}}}
+\DoxyCodeLine{43 \}\mbox{\hyperlink{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863}{EN\_EXT\_INT\_SENSE\_CONTROL}};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{49 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \mbox{\hyperlink{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350}{EN\_EXT\_INTERRUPT\_SRC}} \{}
+\DoxyCodeLine{50     \mbox{\hyperlink{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350a15eea8e66ea11820ade640821d84382d}{INT0}} = 0, \mbox{\hyperlink{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350af557cd0d786ab83c4771da6eea65727b}{INT1}}, \mbox{\hyperlink{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350ac982725fadf3a115b854a6ff2abaa137}{INT2}}}
+\DoxyCodeLine{51 \}\mbox{\hyperlink{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350}{EN\_EXT\_INTERRUPT\_SRC}};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{57 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \mbox{\hyperlink{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57}{EN\_EXT\_INTERRUPT\_BITS}} \{}
+\DoxyCodeLine{58     \mbox{\hyperlink{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57a8f9f0e4ce99a9484a7ec0671d32e1780}{ISC00}} = 0, \mbox{\hyperlink{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57a9a96e1e0ca16c5a287381ba357b7b0c1}{ISC01}}, \mbox{\hyperlink{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57a8eee8bfe5ae7a1fd74df15b118c93ac7}{ISC10}}, \mbox{\hyperlink{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57a5f4ac75573159e999236f8ea307e2005}{ISC11}}, \mbox{\hyperlink{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57ab1eb81c949b3dc995e7b69afd01cb887}{ISC2}} = 6}
+\DoxyCodeLine{59 \}\mbox{\hyperlink{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57}{EN\_EXT\_INTERRUPT\_BITS}};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{69 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_i_n_t___ext_init__t}{INT\_ExtInit\_t}} \{}
+\DoxyCodeLine{70     \mbox{\hyperlink{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350}{EN\_EXT\_INTERRUPT\_SRC}} \mbox{\hyperlink{struct_i_n_t___ext_init__t_a0e9117de7e6a340559202f88a1dbd9c6}{src}};}
+\DoxyCodeLine{71     \mbox{\hyperlink{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863}{EN\_EXT\_INT\_SENSE\_CONTROL}} \mbox{\hyperlink{struct_i_n_t___ext_init__t_ae1baa9f42256960b9f5b2161a808a3ac}{control}};}
+\DoxyCodeLine{72 \}\mbox{\hyperlink{struct_i_n_t___ext_init__t}{INT\_ExtInit\_t}};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{80 \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}{EN\_INT\_ERROR\_STATE}} \mbox{\hyperlink{interrupts__library_8h_a7419cfa46eed99e7c1e19625047ed55d}{INT\_ExtInterruptInit}}(\mbox{\hyperlink{struct_i_n_t___ext_init__t}{INT\_ExtInit\_t}} *ext\_int\_config\_struct);}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{87 \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}{EN\_INT\_ERROR\_STATE}} \mbox{\hyperlink{interrupts__library_8h_a139f533d643326011aa87ae8eb189462}{INT\_EnableINT0}}();}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{94 \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}{EN\_INT\_ERROR\_STATE}} \mbox{\hyperlink{interrupts__library_8h_a7405540d426cb22a5ec670eb02a4e2d8}{INT\_EnableINT1}}();}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{101 \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}{EN\_INT\_ERROR\_STATE}} \mbox{\hyperlink{interrupts__library_8h_ab57cab640828f558409986d13ad88329}{INT\_EnableINT2}}();}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{123 \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}{EN\_INT\_ERROR\_STATE}} \mbox{\hyperlink{interrupts__library_8h_aa1f0835d22838f6ac2b68143ab8d2a6a}{INT\_ExtIntSenseControl}}(\mbox{\hyperlink{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350}{EN\_EXT\_INTERRUPT\_SRC}} src, \mbox{\hyperlink{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863}{EN\_EXT\_INT\_SENSE\_CONTROL}} control);}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* INTERRUPTS\_LIBRARY\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

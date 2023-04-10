@@ -1,0 +1,103 @@
+\hypertarget{dio_8c}{}\doxysection{MCAL/\+DIO/dio.c File Reference}
+\label{dio_8c}\index{MCAL/DIO/dio.c@{MCAL/DIO/dio.c}}
+{\ttfamily \#include \char`\"{}dio.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\+\_\+\+DIO\+\_\+\+ERROR\+\_\+\+STATE}} \mbox{\hyperlink{dio_8c_abdcd89d167b8af73719c960ee9900009}{DIO\+\_\+\+Init}} (\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Initializes the direction of the specified pin. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\+\_\+\+DIO\+\_\+\+ERROR\+\_\+\+STATE}} \mbox{\hyperlink{dio_8c_aafcf464b7e892dc654904247fb154977}{DIO\+\_\+\+Read\+Pin}} (\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Reads the state of a specific pin. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\+\_\+\+DIO\+\_\+\+ERROR\+\_\+\+STATE}} \mbox{\hyperlink{dio_8c_a68dfe65a76698be316ea66324b43835f}{DIO\+\_\+\+Write\+Pin}} (\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Write a specific level to a specified pin. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\+\_\+\+DIO\+\_\+\+ERROR\+\_\+\+STATE}} \mbox{\hyperlink{dio_8c_ac2e3fbe80a9519bdedc61b047b2aae95}{DIO\+\_\+\+Toggle\+Pin}} (\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Toggles the current level of a pin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{dio_8c_abdcd89d167b8af73719c960ee9900009}\label{dio_8c_abdcd89d167b8af73719c960ee9900009}} 
+\index{dio.c@{dio.c}!DIO\_Init@{DIO\_Init}}
+\index{DIO\_Init@{DIO\_Init}!dio.c@{dio.c}}
+\doxysubsubsection{\texorpdfstring{DIO\_Init()}{DIO\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\+\_\+\+DIO\+\_\+\+ERROR\+\_\+\+STATE}} DIO\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Initializes the direction of the specified pin. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+config\+\_\+struct} & Address of the configuration structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+DIO\+\_\+\+PORT\+\_\+\+INVALID Port is invalid. 
+
+DIO\+\_\+\+SUCCESS The pin initialization is a success. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dio_8c_aafcf464b7e892dc654904247fb154977}\label{dio_8c_aafcf464b7e892dc654904247fb154977}} 
+\index{dio.c@{dio.c}!DIO\_ReadPin@{DIO\_ReadPin}}
+\index{DIO\_ReadPin@{DIO\_ReadPin}!dio.c@{dio.c}}
+\doxysubsubsection{\texorpdfstring{DIO\_ReadPin()}{DIO\_ReadPin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\+\_\+\+DIO\+\_\+\+ERROR\+\_\+\+STATE}} DIO\+\_\+\+Read\+Pin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Reads the state of a specific pin. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+config\+\_\+struct} & Address of the configuration structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+DIO\+\_\+\+PORT\+\_\+\+INVALID Port is invalid. 
+
+DIO\+\_\+\+DIRECTION\+\_\+\+INVALID Reading from a pin that is configured as output. 
+
+DIO\+\_\+\+SUCCESS The read operation is a success. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dio_8c_ac2e3fbe80a9519bdedc61b047b2aae95}\label{dio_8c_ac2e3fbe80a9519bdedc61b047b2aae95}} 
+\index{dio.c@{dio.c}!DIO\_TogglePin@{DIO\_TogglePin}}
+\index{DIO\_TogglePin@{DIO\_TogglePin}!dio.c@{dio.c}}
+\doxysubsubsection{\texorpdfstring{DIO\_TogglePin()}{DIO\_TogglePin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\+\_\+\+DIO\+\_\+\+ERROR\+\_\+\+STATE}} DIO\+\_\+\+Toggle\+Pin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Toggles the current level of a pin. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+config\+\_\+struct} & Address of the configuration structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+DIO\+\_\+\+PORT\+\_\+\+INVALID Port is invalid. 
+
+DIO\+\_\+\+DIRECTION\+\_\+\+INVALID Toggle a pin that is configured as input. 
+
+DIO\+\_\+\+SUCCESS The toggle operation is a success. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dio_8c_a68dfe65a76698be316ea66324b43835f}\label{dio_8c_a68dfe65a76698be316ea66324b43835f}} 
+\index{dio.c@{dio.c}!DIO\_WritePin@{DIO\_WritePin}}
+\index{DIO\_WritePin@{DIO\_WritePin}!dio.c@{dio.c}}
+\doxysubsubsection{\texorpdfstring{DIO\_WritePin()}{DIO\_WritePin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\+\_\+\+DIO\+\_\+\+ERROR\+\_\+\+STATE}} DIO\+\_\+\+Write\+Pin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Write a specific level to a specified pin. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+config\+\_\+struct} & Address of the configuration structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+DIO\+\_\+\+PORT\+\_\+\+INVALID Port is invalid. 
+
+DIO\+\_\+\+DIRECTION\+\_\+\+INVALID Writing to a pin that is configured as input. 
+
+DIO\+\_\+\+SUCCESS The write operation is a success. 
+\end{DoxyReturn}

@@ -1,0 +1,358 @@
+\hypertarget{dio_8h}{}\doxysection{MCAL/\+DIO/dio.h File Reference}
+\label{dio_8h}\index{MCAL/DIO/dio.h@{MCAL/DIO/dio.h}}
+{\ttfamily \#include \char`\"{}../../\+Utilities/registers.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../\+Utilities/std\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../\+Utilities/common\+\_\+macros.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_d_i_o___init__t}{DIO\+\_\+\+Init\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Holds the configuration of a specific pin of a port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\+\_\+\+DIO\+\_\+\+ERROR\+\_\+\+STATE}} \mbox{\hyperlink{dio_8h_a3940665c4026fa82789101ebd82c5b2d}{EN\+\_\+\+DIO\+\_\+\+ERROR\+\_\+\+STATE}}
+\item 
+typedef enum \mbox{\hyperlink{dio_8h_a2fba50ffe1a228bb08f2c57cca07a226}{EN\+\_\+\+DIO\+\_\+\+DIRECTION}} \mbox{\hyperlink{dio_8h_a7550f689a8a45b38d2f5728b0531891a}{EN\+\_\+\+DIO\+\_\+\+DIRECTION}}
+\item 
+typedef enum \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308}{EN\+\_\+\+DIO\+\_\+\+PIN}} \mbox{\hyperlink{dio_8h_aa94945ec64fdfe1ed901162d35f0e4fb}{EN\+\_\+\+DIO\+\_\+\+PIN}}
+\item 
+typedef enum \mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635}{EN\+\_\+\+DIO\+\_\+\+PORT}} \mbox{\hyperlink{dio_8h_a5c3663700afdf12b8613a7c47483e5ff}{EN\+\_\+\+DIO\+\_\+\+PORT}}
+\item 
+typedef enum \mbox{\hyperlink{dio_8h_a21bdb33b88f0df02d37c7fd8dd05fee3}{EN\+\_\+\+DIO\+\_\+\+LEVEL}} \mbox{\hyperlink{dio_8h_a8a9d31d98dbeebba1ed385af5404cc6d}{EN\+\_\+\+DIO\+\_\+\+LEVEL}}
+\item 
+typedef struct \mbox{\hyperlink{struct_d_i_o___init__t}{DIO\+\_\+\+Init\+\_\+t}} \mbox{\hyperlink{dio_8h_a1ee25aa211e41654efc0eee060d2d712}{DIO\+\_\+\+Init\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\+\_\+\+DIO\+\_\+\+ERROR\+\_\+\+STATE}} \{ \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551a988d577884264a1af44d82a57d03c176}{DIO\+\_\+\+SUCCESS}} = 0
+, \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551a0a0a70988cb8d8cedb4df62429ccccdc}{DIO\+\_\+\+PORT\+\_\+\+INVALID}}
+, \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551a9a799e1e1a9c2a6755f15b10ae7455c4}{DIO\+\_\+\+DIRECTION\+\_\+\+INVALID}}
+, \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551acfac4d5e1e8415e820b2bbcce84e14c8}{DIO\+\_\+\+PIN\+\_\+\+INVALID}}
+ \}
+\begin{DoxyCompactList}\small\item\em Defines the state of DIO functions. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{dio_8h_a2fba50ffe1a228bb08f2c57cca07a226}{EN\+\_\+\+DIO\+\_\+\+DIRECTION}} \{ \mbox{\hyperlink{dio_8h_a2fba50ffe1a228bb08f2c57cca07a226a99df54ee56f5a382d82021a4c76151a0}{DIO\+\_\+\+INPUT}} = 0
+, \mbox{\hyperlink{dio_8h_a2fba50ffe1a228bb08f2c57cca07a226a066013d99bf79a58f5bd736558b90e2c}{DIO\+\_\+\+OUTPUT}}
+ \}
+\begin{DoxyCompactList}\small\item\em Specifies the state of the pin. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308}{EN\+\_\+\+DIO\+\_\+\+PIN}} \{ \newline
+\mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308a302dbba83d47666da4b37e5a223105ec}{PIN0}} = 0
+, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308afa4ff3b5642cae54b83210fcce1c39ac}{PIN1}}
+, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308ae90c5a59f509ccf2ff2fab0a52a3774f}{PIN2}}
+, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308ace918dad9ed9de15eb1362c94b28feb4}{PIN3}}
+, \newline
+\mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308a4a438ef04f4b0baa53c26cb6046c0973}{PIN4}}
+, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308aa2df961455bde47244aa7318d1c1bd51}{PIN5}}
+, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308a2a4f859ed8bfea5a9409e99dd7349558}{PIN6}}
+, \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308a8aff7b07119bc9bc98d397b397dd30c7}{PIN7}}
+, \newline
+\mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308ae3cd01a5599e6fb565ece7536303e797}{PIN8}}
+ \}
+\begin{DoxyCompactList}\small\item\em Specifies the number of pin. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635}{EN\+\_\+\+DIO\+\_\+\+PORT}} \{ \mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635aeb6782d9dfedf3c6a78ffdb1624fa454}{PORT\+\_\+A}} = 0
+, \mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635a16ada472d473fbd0207b99e9e4d68f4a}{PORT\+\_\+B}}
+, \mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635a627cc690c37f97527dd2f07aa22092d9}{PORT\+\_\+C}}
+, \mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635af7242fe75227a46a190645663f91ce69}{PORT\+\_\+D}}
+ \}
+\begin{DoxyCompactList}\small\item\em Specifies the port number. the port number and returns the address of the corresponding port. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{dio_8h_a21bdb33b88f0df02d37c7fd8dd05fee3}{EN\+\_\+\+DIO\+\_\+\+LEVEL}} \{ \mbox{\hyperlink{dio_8h_a21bdb33b88f0df02d37c7fd8dd05fee3a37170fc54a8b1022c388eb53f5862306}{DIO\+\_\+\+LOW}} = 0
+, \mbox{\hyperlink{dio_8h_a21bdb33b88f0df02d37c7fd8dd05fee3a8037821f04472a22be2178ffc2883242}{DIO\+\_\+\+HIGH}}
+ \}
+\begin{DoxyCompactList}\small\item\em Specifies the level of the pin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\+\_\+\+DIO\+\_\+\+ERROR\+\_\+\+STATE}} \mbox{\hyperlink{dio_8h_abdcd89d167b8af73719c960ee9900009}{DIO\+\_\+\+Init}} (\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Initializes the direction of the specified pin. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\+\_\+\+DIO\+\_\+\+ERROR\+\_\+\+STATE}} \mbox{\hyperlink{dio_8h_aafcf464b7e892dc654904247fb154977}{DIO\+\_\+\+Read\+Pin}} (\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Reads the state of a specific pin. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\+\_\+\+DIO\+\_\+\+ERROR\+\_\+\+STATE}} \mbox{\hyperlink{dio_8h_a68dfe65a76698be316ea66324b43835f}{DIO\+\_\+\+Write\+Pin}} (\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Write a specific level to a specified pin. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\+\_\+\+DIO\+\_\+\+ERROR\+\_\+\+STATE}} \mbox{\hyperlink{dio_8h_ac2e3fbe80a9519bdedc61b047b2aae95}{DIO\+\_\+\+Toggle\+Pin}} (\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\+\_\+\+Init\+\_\+t}} $\ast$p\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Toggles the current level of a pin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{dio_8h_a1ee25aa211e41654efc0eee060d2d712}\label{dio_8h_a1ee25aa211e41654efc0eee060d2d712}} 
+\index{dio.h@{dio.h}!DIO\_Init\_t@{DIO\_Init\_t}}
+\index{DIO\_Init\_t@{DIO\_Init\_t}!dio.h@{dio.h}}
+\doxysubsubsection{\texorpdfstring{DIO\_Init\_t}{DIO\_Init\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_d_i_o___init__t}{DIO\+\_\+\+Init\+\_\+t}} \mbox{\hyperlink{struct_d_i_o___init__t}{DIO\+\_\+\+Init\+\_\+t}}}
+
+\mbox{\Hypertarget{dio_8h_a7550f689a8a45b38d2f5728b0531891a}\label{dio_8h_a7550f689a8a45b38d2f5728b0531891a}} 
+\index{dio.h@{dio.h}!EN\_DIO\_DIRECTION@{EN\_DIO\_DIRECTION}}
+\index{EN\_DIO\_DIRECTION@{EN\_DIO\_DIRECTION}!dio.h@{dio.h}}
+\doxysubsubsection{\texorpdfstring{EN\_DIO\_DIRECTION}{EN\_DIO\_DIRECTION}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{dio_8h_a2fba50ffe1a228bb08f2c57cca07a226}{EN\+\_\+\+DIO\+\_\+\+DIRECTION}} \mbox{\hyperlink{dio_8h_a2fba50ffe1a228bb08f2c57cca07a226}{EN\+\_\+\+DIO\+\_\+\+DIRECTION}}}
+
+\mbox{\Hypertarget{dio_8h_a3940665c4026fa82789101ebd82c5b2d}\label{dio_8h_a3940665c4026fa82789101ebd82c5b2d}} 
+\index{dio.h@{dio.h}!EN\_DIO\_ERROR\_STATE@{EN\_DIO\_ERROR\_STATE}}
+\index{EN\_DIO\_ERROR\_STATE@{EN\_DIO\_ERROR\_STATE}!dio.h@{dio.h}}
+\doxysubsubsection{\texorpdfstring{EN\_DIO\_ERROR\_STATE}{EN\_DIO\_ERROR\_STATE}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\+\_\+\+DIO\+\_\+\+ERROR\+\_\+\+STATE}} \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\+\_\+\+DIO\+\_\+\+ERROR\+\_\+\+STATE}}}
+
+\mbox{\Hypertarget{dio_8h_a8a9d31d98dbeebba1ed385af5404cc6d}\label{dio_8h_a8a9d31d98dbeebba1ed385af5404cc6d}} 
+\index{dio.h@{dio.h}!EN\_DIO\_LEVEL@{EN\_DIO\_LEVEL}}
+\index{EN\_DIO\_LEVEL@{EN\_DIO\_LEVEL}!dio.h@{dio.h}}
+\doxysubsubsection{\texorpdfstring{EN\_DIO\_LEVEL}{EN\_DIO\_LEVEL}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{dio_8h_a21bdb33b88f0df02d37c7fd8dd05fee3}{EN\+\_\+\+DIO\+\_\+\+LEVEL}} \mbox{\hyperlink{dio_8h_a21bdb33b88f0df02d37c7fd8dd05fee3}{EN\+\_\+\+DIO\+\_\+\+LEVEL}}}
+
+\mbox{\Hypertarget{dio_8h_aa94945ec64fdfe1ed901162d35f0e4fb}\label{dio_8h_aa94945ec64fdfe1ed901162d35f0e4fb}} 
+\index{dio.h@{dio.h}!EN\_DIO\_PIN@{EN\_DIO\_PIN}}
+\index{EN\_DIO\_PIN@{EN\_DIO\_PIN}!dio.h@{dio.h}}
+\doxysubsubsection{\texorpdfstring{EN\_DIO\_PIN}{EN\_DIO\_PIN}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308}{EN\+\_\+\+DIO\+\_\+\+PIN}} \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308}{EN\+\_\+\+DIO\+\_\+\+PIN}}}
+
+\mbox{\Hypertarget{dio_8h_a5c3663700afdf12b8613a7c47483e5ff}\label{dio_8h_a5c3663700afdf12b8613a7c47483e5ff}} 
+\index{dio.h@{dio.h}!EN\_DIO\_PORT@{EN\_DIO\_PORT}}
+\index{EN\_DIO\_PORT@{EN\_DIO\_PORT}!dio.h@{dio.h}}
+\doxysubsubsection{\texorpdfstring{EN\_DIO\_PORT}{EN\_DIO\_PORT}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635}{EN\+\_\+\+DIO\+\_\+\+PORT}} \mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635}{EN\+\_\+\+DIO\+\_\+\+PORT}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{dio_8h_a2fba50ffe1a228bb08f2c57cca07a226}\label{dio_8h_a2fba50ffe1a228bb08f2c57cca07a226}} 
+\index{dio.h@{dio.h}!EN\_DIO\_DIRECTION@{EN\_DIO\_DIRECTION}}
+\index{EN\_DIO\_DIRECTION@{EN\_DIO\_DIRECTION}!dio.h@{dio.h}}
+\doxysubsubsection{\texorpdfstring{EN\_DIO\_DIRECTION}{EN\_DIO\_DIRECTION}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{dio_8h_a2fba50ffe1a228bb08f2c57cca07a226}{EN\+\_\+\+DIO\+\_\+\+DIRECTION}}}
+
+
+
+Specifies the state of the pin. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_INPUT@{DIO\_INPUT}!dio.h@{dio.h}}\index{dio.h@{dio.h}!DIO\_INPUT@{DIO\_INPUT}}}\mbox{\Hypertarget{dio_8h_a2fba50ffe1a228bb08f2c57cca07a226a99df54ee56f5a382d82021a4c76151a0}\label{dio_8h_a2fba50ffe1a228bb08f2c57cca07a226a99df54ee56f5a382d82021a4c76151a0}} 
+DIO\+\_\+\+INPUT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_OUTPUT@{DIO\_OUTPUT}!dio.h@{dio.h}}\index{dio.h@{dio.h}!DIO\_OUTPUT@{DIO\_OUTPUT}}}\mbox{\Hypertarget{dio_8h_a2fba50ffe1a228bb08f2c57cca07a226a066013d99bf79a58f5bd736558b90e2c}\label{dio_8h_a2fba50ffe1a228bb08f2c57cca07a226a066013d99bf79a58f5bd736558b90e2c}} 
+DIO\+\_\+\+OUTPUT&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{dio_8h_a20561a55237e7d7a867d56dadcdcc551}\label{dio_8h_a20561a55237e7d7a867d56dadcdcc551}} 
+\index{dio.h@{dio.h}!EN\_DIO\_ERROR\_STATE@{EN\_DIO\_ERROR\_STATE}}
+\index{EN\_DIO\_ERROR\_STATE@{EN\_DIO\_ERROR\_STATE}!dio.h@{dio.h}}
+\doxysubsubsection{\texorpdfstring{EN\_DIO\_ERROR\_STATE}{EN\_DIO\_ERROR\_STATE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\+\_\+\+DIO\+\_\+\+ERROR\+\_\+\+STATE}}}
+
+
+
+Defines the state of DIO functions. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_SUCCESS@{DIO\_SUCCESS}!dio.h@{dio.h}}\index{dio.h@{dio.h}!DIO\_SUCCESS@{DIO\_SUCCESS}}}\mbox{\Hypertarget{dio_8h_a20561a55237e7d7a867d56dadcdcc551a988d577884264a1af44d82a57d03c176}\label{dio_8h_a20561a55237e7d7a867d56dadcdcc551a988d577884264a1af44d82a57d03c176}} 
+DIO\+\_\+\+SUCCESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PORT\_INVALID@{DIO\_PORT\_INVALID}!dio.h@{dio.h}}\index{dio.h@{dio.h}!DIO\_PORT\_INVALID@{DIO\_PORT\_INVALID}}}\mbox{\Hypertarget{dio_8h_a20561a55237e7d7a867d56dadcdcc551a0a0a70988cb8d8cedb4df62429ccccdc}\label{dio_8h_a20561a55237e7d7a867d56dadcdcc551a0a0a70988cb8d8cedb4df62429ccccdc}} 
+DIO\+\_\+\+PORT\+\_\+\+INVALID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_DIRECTION\_INVALID@{DIO\_DIRECTION\_INVALID}!dio.h@{dio.h}}\index{dio.h@{dio.h}!DIO\_DIRECTION\_INVALID@{DIO\_DIRECTION\_INVALID}}}\mbox{\Hypertarget{dio_8h_a20561a55237e7d7a867d56dadcdcc551a9a799e1e1a9c2a6755f15b10ae7455c4}\label{dio_8h_a20561a55237e7d7a867d56dadcdcc551a9a799e1e1a9c2a6755f15b10ae7455c4}} 
+DIO\+\_\+\+DIRECTION\+\_\+\+INVALID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PIN\_INVALID@{DIO\_PIN\_INVALID}!dio.h@{dio.h}}\index{dio.h@{dio.h}!DIO\_PIN\_INVALID@{DIO\_PIN\_INVALID}}}\mbox{\Hypertarget{dio_8h_a20561a55237e7d7a867d56dadcdcc551acfac4d5e1e8415e820b2bbcce84e14c8}\label{dio_8h_a20561a55237e7d7a867d56dadcdcc551acfac4d5e1e8415e820b2bbcce84e14c8}} 
+DIO\+\_\+\+PIN\+\_\+\+INVALID&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{dio_8h_a21bdb33b88f0df02d37c7fd8dd05fee3}\label{dio_8h_a21bdb33b88f0df02d37c7fd8dd05fee3}} 
+\index{dio.h@{dio.h}!EN\_DIO\_LEVEL@{EN\_DIO\_LEVEL}}
+\index{EN\_DIO\_LEVEL@{EN\_DIO\_LEVEL}!dio.h@{dio.h}}
+\doxysubsubsection{\texorpdfstring{EN\_DIO\_LEVEL}{EN\_DIO\_LEVEL}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{dio_8h_a21bdb33b88f0df02d37c7fd8dd05fee3}{EN\+\_\+\+DIO\+\_\+\+LEVEL}}}
+
+
+
+Specifies the level of the pin. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_LOW@{DIO\_LOW}!dio.h@{dio.h}}\index{dio.h@{dio.h}!DIO\_LOW@{DIO\_LOW}}}\mbox{\Hypertarget{dio_8h_a21bdb33b88f0df02d37c7fd8dd05fee3a37170fc54a8b1022c388eb53f5862306}\label{dio_8h_a21bdb33b88f0df02d37c7fd8dd05fee3a37170fc54a8b1022c388eb53f5862306}} 
+DIO\+\_\+\+LOW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_HIGH@{DIO\_HIGH}!dio.h@{dio.h}}\index{dio.h@{dio.h}!DIO\_HIGH@{DIO\_HIGH}}}\mbox{\Hypertarget{dio_8h_a21bdb33b88f0df02d37c7fd8dd05fee3a8037821f04472a22be2178ffc2883242}\label{dio_8h_a21bdb33b88f0df02d37c7fd8dd05fee3a8037821f04472a22be2178ffc2883242}} 
+DIO\+\_\+\+HIGH&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{dio_8h_a84417edfefaee3aa3d185a58fbf70308}\label{dio_8h_a84417edfefaee3aa3d185a58fbf70308}} 
+\index{dio.h@{dio.h}!EN\_DIO\_PIN@{EN\_DIO\_PIN}}
+\index{EN\_DIO\_PIN@{EN\_DIO\_PIN}!dio.h@{dio.h}}
+\doxysubsubsection{\texorpdfstring{EN\_DIO\_PIN}{EN\_DIO\_PIN}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{dio_8h_a84417edfefaee3aa3d185a58fbf70308}{EN\+\_\+\+DIO\+\_\+\+PIN}}}
+
+
+
+Specifies the number of pin. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PIN0@{PIN0}!dio.h@{dio.h}}\index{dio.h@{dio.h}!PIN0@{PIN0}}}\mbox{\Hypertarget{dio_8h_a84417edfefaee3aa3d185a58fbf70308a302dbba83d47666da4b37e5a223105ec}\label{dio_8h_a84417edfefaee3aa3d185a58fbf70308a302dbba83d47666da4b37e5a223105ec}} 
+PIN0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PIN1@{PIN1}!dio.h@{dio.h}}\index{dio.h@{dio.h}!PIN1@{PIN1}}}\mbox{\Hypertarget{dio_8h_a84417edfefaee3aa3d185a58fbf70308afa4ff3b5642cae54b83210fcce1c39ac}\label{dio_8h_a84417edfefaee3aa3d185a58fbf70308afa4ff3b5642cae54b83210fcce1c39ac}} 
+PIN1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PIN2@{PIN2}!dio.h@{dio.h}}\index{dio.h@{dio.h}!PIN2@{PIN2}}}\mbox{\Hypertarget{dio_8h_a84417edfefaee3aa3d185a58fbf70308ae90c5a59f509ccf2ff2fab0a52a3774f}\label{dio_8h_a84417edfefaee3aa3d185a58fbf70308ae90c5a59f509ccf2ff2fab0a52a3774f}} 
+PIN2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PIN3@{PIN3}!dio.h@{dio.h}}\index{dio.h@{dio.h}!PIN3@{PIN3}}}\mbox{\Hypertarget{dio_8h_a84417edfefaee3aa3d185a58fbf70308ace918dad9ed9de15eb1362c94b28feb4}\label{dio_8h_a84417edfefaee3aa3d185a58fbf70308ace918dad9ed9de15eb1362c94b28feb4}} 
+PIN3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PIN4@{PIN4}!dio.h@{dio.h}}\index{dio.h@{dio.h}!PIN4@{PIN4}}}\mbox{\Hypertarget{dio_8h_a84417edfefaee3aa3d185a58fbf70308a4a438ef04f4b0baa53c26cb6046c0973}\label{dio_8h_a84417edfefaee3aa3d185a58fbf70308a4a438ef04f4b0baa53c26cb6046c0973}} 
+PIN4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PIN5@{PIN5}!dio.h@{dio.h}}\index{dio.h@{dio.h}!PIN5@{PIN5}}}\mbox{\Hypertarget{dio_8h_a84417edfefaee3aa3d185a58fbf70308aa2df961455bde47244aa7318d1c1bd51}\label{dio_8h_a84417edfefaee3aa3d185a58fbf70308aa2df961455bde47244aa7318d1c1bd51}} 
+PIN5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PIN6@{PIN6}!dio.h@{dio.h}}\index{dio.h@{dio.h}!PIN6@{PIN6}}}\mbox{\Hypertarget{dio_8h_a84417edfefaee3aa3d185a58fbf70308a2a4f859ed8bfea5a9409e99dd7349558}\label{dio_8h_a84417edfefaee3aa3d185a58fbf70308a2a4f859ed8bfea5a9409e99dd7349558}} 
+PIN6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PIN7@{PIN7}!dio.h@{dio.h}}\index{dio.h@{dio.h}!PIN7@{PIN7}}}\mbox{\Hypertarget{dio_8h_a84417edfefaee3aa3d185a58fbf70308a8aff7b07119bc9bc98d397b397dd30c7}\label{dio_8h_a84417edfefaee3aa3d185a58fbf70308a8aff7b07119bc9bc98d397b397dd30c7}} 
+PIN7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PIN8@{PIN8}!dio.h@{dio.h}}\index{dio.h@{dio.h}!PIN8@{PIN8}}}\mbox{\Hypertarget{dio_8h_a84417edfefaee3aa3d185a58fbf70308ae3cd01a5599e6fb565ece7536303e797}\label{dio_8h_a84417edfefaee3aa3d185a58fbf70308ae3cd01a5599e6fb565ece7536303e797}} 
+PIN8&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{dio_8h_ad22a2c5f047ff2b4c63622e82d378635}\label{dio_8h_ad22a2c5f047ff2b4c63622e82d378635}} 
+\index{dio.h@{dio.h}!EN\_DIO\_PORT@{EN\_DIO\_PORT}}
+\index{EN\_DIO\_PORT@{EN\_DIO\_PORT}!dio.h@{dio.h}}
+\doxysubsubsection{\texorpdfstring{EN\_DIO\_PORT}{EN\_DIO\_PORT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{dio_8h_ad22a2c5f047ff2b4c63622e82d378635}{EN\+\_\+\+DIO\+\_\+\+PORT}}}
+
+
+
+Specifies the port number. the port number and returns the address of the corresponding port. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PORT\_A@{PORT\_A}!dio.h@{dio.h}}\index{dio.h@{dio.h}!PORT\_A@{PORT\_A}}}\mbox{\Hypertarget{dio_8h_ad22a2c5f047ff2b4c63622e82d378635aeb6782d9dfedf3c6a78ffdb1624fa454}\label{dio_8h_ad22a2c5f047ff2b4c63622e82d378635aeb6782d9dfedf3c6a78ffdb1624fa454}} 
+PORT\+\_\+A&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PORT\_B@{PORT\_B}!dio.h@{dio.h}}\index{dio.h@{dio.h}!PORT\_B@{PORT\_B}}}\mbox{\Hypertarget{dio_8h_ad22a2c5f047ff2b4c63622e82d378635a16ada472d473fbd0207b99e9e4d68f4a}\label{dio_8h_ad22a2c5f047ff2b4c63622e82d378635a16ada472d473fbd0207b99e9e4d68f4a}} 
+PORT\+\_\+B&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PORT\_C@{PORT\_C}!dio.h@{dio.h}}\index{dio.h@{dio.h}!PORT\_C@{PORT\_C}}}\mbox{\Hypertarget{dio_8h_ad22a2c5f047ff2b4c63622e82d378635a627cc690c37f97527dd2f07aa22092d9}\label{dio_8h_ad22a2c5f047ff2b4c63622e82d378635a627cc690c37f97527dd2f07aa22092d9}} 
+PORT\+\_\+C&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PORT\_D@{PORT\_D}!dio.h@{dio.h}}\index{dio.h@{dio.h}!PORT\_D@{PORT\_D}}}\mbox{\Hypertarget{dio_8h_ad22a2c5f047ff2b4c63622e82d378635af7242fe75227a46a190645663f91ce69}\label{dio_8h_ad22a2c5f047ff2b4c63622e82d378635af7242fe75227a46a190645663f91ce69}} 
+PORT\+\_\+D&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{dio_8h_abdcd89d167b8af73719c960ee9900009}\label{dio_8h_abdcd89d167b8af73719c960ee9900009}} 
+\index{dio.h@{dio.h}!DIO\_Init@{DIO\_Init}}
+\index{DIO\_Init@{DIO\_Init}!dio.h@{dio.h}}
+\doxysubsubsection{\texorpdfstring{DIO\_Init()}{DIO\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\+\_\+\+DIO\+\_\+\+ERROR\+\_\+\+STATE}} DIO\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Initializes the direction of the specified pin. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+config\+\_\+struct} & Address of the configuration structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+DIO\+\_\+\+PORT\+\_\+\+INVALID Port in invalid. 
+
+DIO\+\_\+\+SUCCESS The pin initialization is a success.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+config\+\_\+struct} & Address of the configuration structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+DIO\+\_\+\+PORT\+\_\+\+INVALID Port is invalid. 
+
+DIO\+\_\+\+SUCCESS The pin initialization is a success. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dio_8h_aafcf464b7e892dc654904247fb154977}\label{dio_8h_aafcf464b7e892dc654904247fb154977}} 
+\index{dio.h@{dio.h}!DIO\_ReadPin@{DIO\_ReadPin}}
+\index{DIO\_ReadPin@{DIO\_ReadPin}!dio.h@{dio.h}}
+\doxysubsubsection{\texorpdfstring{DIO\_ReadPin()}{DIO\_ReadPin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\+\_\+\+DIO\+\_\+\+ERROR\+\_\+\+STATE}} DIO\+\_\+\+Read\+Pin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Reads the state of a specific pin. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+config\+\_\+struct} & Address of the configuration structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+DIO\+\_\+\+PORT\+\_\+\+INVALID Port is invalid. 
+
+DIO\+\_\+\+DIRECTION\+\_\+\+INVALID Reading from a pin that is configured as output. 
+
+DIO\+\_\+\+SUCCESS The read operation is a success. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dio_8h_ac2e3fbe80a9519bdedc61b047b2aae95}\label{dio_8h_ac2e3fbe80a9519bdedc61b047b2aae95}} 
+\index{dio.h@{dio.h}!DIO\_TogglePin@{DIO\_TogglePin}}
+\index{DIO\_TogglePin@{DIO\_TogglePin}!dio.h@{dio.h}}
+\doxysubsubsection{\texorpdfstring{DIO\_TogglePin()}{DIO\_TogglePin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\+\_\+\+DIO\+\_\+\+ERROR\+\_\+\+STATE}} DIO\+\_\+\+Toggle\+Pin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Toggles the current level of a pin. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+config\+\_\+struct} & Address of the configuration structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+DIO\+\_\+\+PORT\+\_\+\+INVALID Port is invalid. 
+
+DIO\+\_\+\+DIRECTION\+\_\+\+INVALID Toggle a pin that is configured as input. 
+
+DIO\+\_\+\+SUCCESS The toggle operation is a success. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dio_8h_a68dfe65a76698be316ea66324b43835f}\label{dio_8h_a68dfe65a76698be316ea66324b43835f}} 
+\index{dio.h@{dio.h}!DIO\_WritePin@{DIO\_WritePin}}
+\index{DIO\_WritePin@{DIO\_WritePin}!dio.h@{dio.h}}
+\doxysubsubsection{\texorpdfstring{DIO\_WritePin()}{DIO\_WritePin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dio_8h_a20561a55237e7d7a867d56dadcdcc551}{EN\+\_\+\+DIO\+\_\+\+ERROR\+\_\+\+STATE}} DIO\+\_\+\+Write\+Pin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_d_i_o___init__t}{DIO\+\_\+\+Init\+\_\+t}} $\ast$}]{p\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Write a specific level to a specified pin. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+config\+\_\+struct} & Address of the configuration structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+DIO\+\_\+\+PORT\+\_\+\+INVALID Port is invalid. 
+
+DIO\+\_\+\+DIRECTION\+\_\+\+INVALID Writing to a pin that is configured as input. 
+
+DIO\+\_\+\+SUCCESS The write operation is a success. 
+\end{DoxyReturn}

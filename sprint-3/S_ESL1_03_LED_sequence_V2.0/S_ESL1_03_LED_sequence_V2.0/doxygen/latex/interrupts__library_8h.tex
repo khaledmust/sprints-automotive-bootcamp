@@ -1,0 +1,379 @@
+\hypertarget{interrupts__library_8h}{}\doxysection{Interrupts\+\_\+\+Library/interrupts\+\_\+library.h File Reference}
+\label{interrupts__library_8h}\index{Interrupts\_Library/interrupts\_library.h@{Interrupts\_Library/interrupts\_library.h}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_i_n_t___ext_init__t}{INT\+\_\+\+Ext\+Init\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Holds the configuration of external interrupts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{interrupts__library_8h_aef9ee27676f002a54355685968b07da5}{ISR}}(INT\+\_\+\+VECT)
+\begin{DoxyCompactList}\small\item\em Macro for the expansion of the declaration and definition of ISR functions. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{interrupts__library_8h_a1607129b3853bd4e31dffd5ab3a7c058}{EXT\+\_\+\+INT0}}~\+\_\+\+\_\+vector\+\_\+1
+\begin{DoxyCompactList}\small\item\em External interrupt request 0. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{interrupts__library_8h_a747ac8a90f3494ef4c29dc6ef10ae1b0}{EXT\+\_\+\+INT1}}~\+\_\+\+\_\+vector\+\_\+2
+\begin{DoxyCompactList}\small\item\em External interrupt request 1. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{interrupts__library_8h_afd82757ef10befab4762b35594d96df9}{EXT\+\_\+\+INT2}}~\+\_\+\+\_\+vector\+\_\+3
+\begin{DoxyCompactList}\small\item\em External interrupt request 2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}{EN\+\_\+\+INT\+\_\+\+ERROR\+\_\+\+STATE}} \mbox{\hyperlink{interrupts__library_8h_afb8e0aa24d3c6e326113b4530a2ef083}{EN\+\_\+\+INT\+\_\+\+ERROR\+\_\+\+STATE}}
+\item 
+typedef enum \mbox{\hyperlink{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863}{EN\+\_\+\+EXT\+\_\+\+INT\+\_\+\+SENSE\+\_\+\+CONTROL}} \mbox{\hyperlink{interrupts__library_8h_a945e66e4ef5036e39ef6fca79e727e5e}{EN\+\_\+\+EXT\+\_\+\+INT\+\_\+\+SENSE\+\_\+\+CONTROL}}
+\item 
+typedef enum \mbox{\hyperlink{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350}{EN\+\_\+\+EXT\+\_\+\+INTERRUPT\+\_\+\+SRC}} \mbox{\hyperlink{interrupts__library_8h_af92b6194b1c154d83014502c5832ecdc}{EN\+\_\+\+EXT\+\_\+\+INTERRUPT\+\_\+\+SRC}}
+\item 
+typedef enum \mbox{\hyperlink{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57}{EN\+\_\+\+EXT\+\_\+\+INTERRUPT\+\_\+\+BITS}} \mbox{\hyperlink{interrupts__library_8h_aa5c257a81ed82433e6cb57288a8eca69}{EN\+\_\+\+EXT\+\_\+\+INTERRUPT\+\_\+\+BITS}}
+\item 
+typedef struct \mbox{\hyperlink{struct_i_n_t___ext_init__t}{INT\+\_\+\+Ext\+Init\+\_\+t}} \mbox{\hyperlink{interrupts__library_8h_ab2d940008b26ec2f33ed1f45fff3655d}{INT\+\_\+\+Ext\+Init\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}{EN\+\_\+\+INT\+\_\+\+ERROR\+\_\+\+STATE}} \{ \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1a4197c09e9075ad5e8ad90f57372bd739}{INT\+\_\+\+SUCCESS}} = 0
+, \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1ae0bd67ad37e6004eefd3e7969f76f1d5}{INT\+\_\+\+GLOBAL\+\_\+\+INT\+\_\+\+NOT\+\_\+\+SET}}
+, \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1afb8b403afaafa337ac0135ddabdcf3e4}{INT\+\_\+\+INVALID\+\_\+\+CONTROL}}
+, \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1aa0eaf8d9cd5b63efb2ff8e9375a98eb7}{INT\+\_\+\+INVALID\+\_\+\+EXTERNAL\+\_\+\+SRC}}
+ \}
+\begin{DoxyCompactList}\small\item\em Specifies the state of DIO functions. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863}{EN\+\_\+\+EXT\+\_\+\+INT\+\_\+\+SENSE\+\_\+\+CONTROL}} \{ \mbox{\hyperlink{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863ab211cf14477a0a8c8a2d7a6c56d7a3ae}{LOW\+\_\+\+LEVEL}} = 0
+, \mbox{\hyperlink{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863a6c0e9a26245e0a910d51fbb63b24092d}{ANY\+\_\+\+LOGIC\+\_\+\+CHANGE}}
+, \mbox{\hyperlink{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863ab88c132109a78c131815f270b8bef045}{FALLING\+\_\+\+EDGE}}
+, \mbox{\hyperlink{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863a86445853271053ed37f404b9ca4fa434}{RISING\+\_\+\+EDGE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Specifies the triggering mechanism for the external interrupts. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350}{EN\+\_\+\+EXT\+\_\+\+INTERRUPT\+\_\+\+SRC}} \{ \mbox{\hyperlink{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350a15eea8e66ea11820ade640821d84382d}{INT0}} = 0
+, \mbox{\hyperlink{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350af557cd0d786ab83c4771da6eea65727b}{INT1}}
+, \mbox{\hyperlink{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350ac982725fadf3a115b854a6ff2abaa137}{INT2}}
+ \}
+\begin{DoxyCompactList}\small\item\em Specifies the external interrupts source. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57}{EN\+\_\+\+EXT\+\_\+\+INTERRUPT\+\_\+\+BITS}} \{ \newline
+\mbox{\hyperlink{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57a8f9f0e4ce99a9484a7ec0671d32e1780}{ISC00}} = 0
+, \mbox{\hyperlink{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57a9a96e1e0ca16c5a287381ba357b7b0c1}{ISC01}}
+, \mbox{\hyperlink{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57a8eee8bfe5ae7a1fd74df15b118c93ac7}{ISC10}}
+, \mbox{\hyperlink{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57a5f4ac75573159e999236f8ea307e2005}{ISC11}}
+, \newline
+\mbox{\hyperlink{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57ab1eb81c949b3dc995e7b69afd01cb887}{ISC2}} = 6
+ \}
+\begin{DoxyCompactList}\small\item\em Control sense configuration bits. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}{EN\+\_\+\+INT\+\_\+\+ERROR\+\_\+\+STATE}} \mbox{\hyperlink{interrupts__library_8h_a7419cfa46eed99e7c1e19625047ed55d}{INT\+\_\+\+Ext\+Interrupt\+Init}} (\mbox{\hyperlink{struct_i_n_t___ext_init__t}{INT\+\_\+\+Ext\+Init\+\_\+t}} $\ast$ext\+\_\+int\+\_\+config\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Enables and sets the sense control of the external interrupt. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}{EN\+\_\+\+INT\+\_\+\+ERROR\+\_\+\+STATE}} \mbox{\hyperlink{interrupts__library_8h_a139f533d643326011aa87ae8eb189462}{INT\+\_\+\+Enable\+INT0}} ()
+\begin{DoxyCompactList}\small\item\em Enables external interrupt 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}{EN\+\_\+\+INT\+\_\+\+ERROR\+\_\+\+STATE}} \mbox{\hyperlink{interrupts__library_8h_a7405540d426cb22a5ec670eb02a4e2d8}{INT\+\_\+\+Enable\+INT1}} ()
+\begin{DoxyCompactList}\small\item\em Enables external interrupt 1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}{EN\+\_\+\+INT\+\_\+\+ERROR\+\_\+\+STATE}} \mbox{\hyperlink{interrupts__library_8h_ab57cab640828f558409986d13ad88329}{INT\+\_\+\+Enable\+INT2}} ()
+\begin{DoxyCompactList}\small\item\em Enables external interrupt 2. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}{EN\+\_\+\+INT\+\_\+\+ERROR\+\_\+\+STATE}} \mbox{\hyperlink{interrupts__library_8h_aa1f0835d22838f6ac2b68143ab8d2a6a}{INT\+\_\+\+Ext\+Int\+Sense\+Control}} (\mbox{\hyperlink{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350}{EN\+\_\+\+EXT\+\_\+\+INTERRUPT\+\_\+\+SRC}} src, \mbox{\hyperlink{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863}{EN\+\_\+\+EXT\+\_\+\+INT\+\_\+\+SENSE\+\_\+\+CONTROL}} control)
+\begin{DoxyCompactList}\small\item\em Controls the triggering mechanism of INT1 and INT0. Interrupt 0 sense control. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{interrupts__library_8h_a1607129b3853bd4e31dffd5ab3a7c058}\label{interrupts__library_8h_a1607129b3853bd4e31dffd5ab3a7c058}} 
+\index{interrupts\_library.h@{interrupts\_library.h}!EXT\_INT0@{EXT\_INT0}}
+\index{EXT\_INT0@{EXT\_INT0}!interrupts\_library.h@{interrupts\_library.h}}
+\doxysubsubsection{\texorpdfstring{EXT\_INT0}{EXT\_INT0}}
+{\footnotesize\ttfamily \#define EXT\+\_\+\+INT0~\+\_\+\+\_\+vector\+\_\+1}
+
+
+
+External interrupt request 0. 
+
+\mbox{\Hypertarget{interrupts__library_8h_a747ac8a90f3494ef4c29dc6ef10ae1b0}\label{interrupts__library_8h_a747ac8a90f3494ef4c29dc6ef10ae1b0}} 
+\index{interrupts\_library.h@{interrupts\_library.h}!EXT\_INT1@{EXT\_INT1}}
+\index{EXT\_INT1@{EXT\_INT1}!interrupts\_library.h@{interrupts\_library.h}}
+\doxysubsubsection{\texorpdfstring{EXT\_INT1}{EXT\_INT1}}
+{\footnotesize\ttfamily \#define EXT\+\_\+\+INT1~\+\_\+\+\_\+vector\+\_\+2}
+
+
+
+External interrupt request 1. 
+
+\mbox{\Hypertarget{interrupts__library_8h_afd82757ef10befab4762b35594d96df9}\label{interrupts__library_8h_afd82757ef10befab4762b35594d96df9}} 
+\index{interrupts\_library.h@{interrupts\_library.h}!EXT\_INT2@{EXT\_INT2}}
+\index{EXT\_INT2@{EXT\_INT2}!interrupts\_library.h@{interrupts\_library.h}}
+\doxysubsubsection{\texorpdfstring{EXT\_INT2}{EXT\_INT2}}
+{\footnotesize\ttfamily \#define EXT\+\_\+\+INT2~\+\_\+\+\_\+vector\+\_\+3}
+
+
+
+External interrupt request 2. 
+
+\mbox{\Hypertarget{interrupts__library_8h_aef9ee27676f002a54355685968b07da5}\label{interrupts__library_8h_aef9ee27676f002a54355685968b07da5}} 
+\index{interrupts\_library.h@{interrupts\_library.h}!ISR@{ISR}}
+\index{ISR@{ISR}!interrupts\_library.h@{interrupts\_library.h}}
+\doxysubsubsection{\texorpdfstring{ISR}{ISR}}
+{\footnotesize\ttfamily \#define ISR(\begin{DoxyParamCaption}\item[{}]{INT\+\_\+\+VECT }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void} INT\_VECT(\textcolor{keywordtype}{void}) \_\_attribute\_\_((signal,used));\(\backslash\)}
+\DoxyCodeLine{\textcolor{keywordtype}{void} INT\_VECT}
+
+\end{DoxyCode}
+
+
+Macro for the expansion of the declaration and definition of ISR functions. 
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{interrupts__library_8h_a945e66e4ef5036e39ef6fca79e727e5e}\label{interrupts__library_8h_a945e66e4ef5036e39ef6fca79e727e5e}} 
+\index{interrupts\_library.h@{interrupts\_library.h}!EN\_EXT\_INT\_SENSE\_CONTROL@{EN\_EXT\_INT\_SENSE\_CONTROL}}
+\index{EN\_EXT\_INT\_SENSE\_CONTROL@{EN\_EXT\_INT\_SENSE\_CONTROL}!interrupts\_library.h@{interrupts\_library.h}}
+\doxysubsubsection{\texorpdfstring{EN\_EXT\_INT\_SENSE\_CONTROL}{EN\_EXT\_INT\_SENSE\_CONTROL}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863}{EN\+\_\+\+EXT\+\_\+\+INT\+\_\+\+SENSE\+\_\+\+CONTROL}} \mbox{\hyperlink{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863}{EN\+\_\+\+EXT\+\_\+\+INT\+\_\+\+SENSE\+\_\+\+CONTROL}}}
+
+\mbox{\Hypertarget{interrupts__library_8h_aa5c257a81ed82433e6cb57288a8eca69}\label{interrupts__library_8h_aa5c257a81ed82433e6cb57288a8eca69}} 
+\index{interrupts\_library.h@{interrupts\_library.h}!EN\_EXT\_INTERRUPT\_BITS@{EN\_EXT\_INTERRUPT\_BITS}}
+\index{EN\_EXT\_INTERRUPT\_BITS@{EN\_EXT\_INTERRUPT\_BITS}!interrupts\_library.h@{interrupts\_library.h}}
+\doxysubsubsection{\texorpdfstring{EN\_EXT\_INTERRUPT\_BITS}{EN\_EXT\_INTERRUPT\_BITS}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57}{EN\+\_\+\+EXT\+\_\+\+INTERRUPT\+\_\+\+BITS}} \mbox{\hyperlink{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57}{EN\+\_\+\+EXT\+\_\+\+INTERRUPT\+\_\+\+BITS}}}
+
+\mbox{\Hypertarget{interrupts__library_8h_af92b6194b1c154d83014502c5832ecdc}\label{interrupts__library_8h_af92b6194b1c154d83014502c5832ecdc}} 
+\index{interrupts\_library.h@{interrupts\_library.h}!EN\_EXT\_INTERRUPT\_SRC@{EN\_EXT\_INTERRUPT\_SRC}}
+\index{EN\_EXT\_INTERRUPT\_SRC@{EN\_EXT\_INTERRUPT\_SRC}!interrupts\_library.h@{interrupts\_library.h}}
+\doxysubsubsection{\texorpdfstring{EN\_EXT\_INTERRUPT\_SRC}{EN\_EXT\_INTERRUPT\_SRC}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350}{EN\+\_\+\+EXT\+\_\+\+INTERRUPT\+\_\+\+SRC}} \mbox{\hyperlink{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350}{EN\+\_\+\+EXT\+\_\+\+INTERRUPT\+\_\+\+SRC}}}
+
+\mbox{\Hypertarget{interrupts__library_8h_afb8e0aa24d3c6e326113b4530a2ef083}\label{interrupts__library_8h_afb8e0aa24d3c6e326113b4530a2ef083}} 
+\index{interrupts\_library.h@{interrupts\_library.h}!EN\_INT\_ERROR\_STATE@{EN\_INT\_ERROR\_STATE}}
+\index{EN\_INT\_ERROR\_STATE@{EN\_INT\_ERROR\_STATE}!interrupts\_library.h@{interrupts\_library.h}}
+\doxysubsubsection{\texorpdfstring{EN\_INT\_ERROR\_STATE}{EN\_INT\_ERROR\_STATE}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}{EN\+\_\+\+INT\+\_\+\+ERROR\+\_\+\+STATE}} \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}{EN\+\_\+\+INT\+\_\+\+ERROR\+\_\+\+STATE}}}
+
+\mbox{\Hypertarget{interrupts__library_8h_ab2d940008b26ec2f33ed1f45fff3655d}\label{interrupts__library_8h_ab2d940008b26ec2f33ed1f45fff3655d}} 
+\index{interrupts\_library.h@{interrupts\_library.h}!INT\_ExtInit\_t@{INT\_ExtInit\_t}}
+\index{INT\_ExtInit\_t@{INT\_ExtInit\_t}!interrupts\_library.h@{interrupts\_library.h}}
+\doxysubsubsection{\texorpdfstring{INT\_ExtInit\_t}{INT\_ExtInit\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_i_n_t___ext_init__t}{INT\+\_\+\+Ext\+Init\+\_\+t}} \mbox{\hyperlink{struct_i_n_t___ext_init__t}{INT\+\_\+\+Ext\+Init\+\_\+t}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863}\label{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863}} 
+\index{interrupts\_library.h@{interrupts\_library.h}!EN\_EXT\_INT\_SENSE\_CONTROL@{EN\_EXT\_INT\_SENSE\_CONTROL}}
+\index{EN\_EXT\_INT\_SENSE\_CONTROL@{EN\_EXT\_INT\_SENSE\_CONTROL}!interrupts\_library.h@{interrupts\_library.h}}
+\doxysubsubsection{\texorpdfstring{EN\_EXT\_INT\_SENSE\_CONTROL}{EN\_EXT\_INT\_SENSE\_CONTROL}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863}{EN\+\_\+\+EXT\+\_\+\+INT\+\_\+\+SENSE\+\_\+\+CONTROL}}}
+
+
+
+Specifies the triggering mechanism for the external interrupts. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOW\_LEVEL@{LOW\_LEVEL}!interrupts\_library.h@{interrupts\_library.h}}\index{interrupts\_library.h@{interrupts\_library.h}!LOW\_LEVEL@{LOW\_LEVEL}}}\mbox{\Hypertarget{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863ab211cf14477a0a8c8a2d7a6c56d7a3ae}\label{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863ab211cf14477a0a8c8a2d7a6c56d7a3ae}} 
+LOW\+\_\+\+LEVEL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ANY\_LOGIC\_CHANGE@{ANY\_LOGIC\_CHANGE}!interrupts\_library.h@{interrupts\_library.h}}\index{interrupts\_library.h@{interrupts\_library.h}!ANY\_LOGIC\_CHANGE@{ANY\_LOGIC\_CHANGE}}}\mbox{\Hypertarget{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863a6c0e9a26245e0a910d51fbb63b24092d}\label{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863a6c0e9a26245e0a910d51fbb63b24092d}} 
+ANY\+\_\+\+LOGIC\+\_\+\+CHANGE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FALLING\_EDGE@{FALLING\_EDGE}!interrupts\_library.h@{interrupts\_library.h}}\index{interrupts\_library.h@{interrupts\_library.h}!FALLING\_EDGE@{FALLING\_EDGE}}}\mbox{\Hypertarget{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863ab88c132109a78c131815f270b8bef045}\label{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863ab88c132109a78c131815f270b8bef045}} 
+FALLING\+\_\+\+EDGE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RISING\_EDGE@{RISING\_EDGE}!interrupts\_library.h@{interrupts\_library.h}}\index{interrupts\_library.h@{interrupts\_library.h}!RISING\_EDGE@{RISING\_EDGE}}}\mbox{\Hypertarget{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863a86445853271053ed37f404b9ca4fa434}\label{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863a86445853271053ed37f404b9ca4fa434}} 
+RISING\+\_\+\+EDGE&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57}\label{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57}} 
+\index{interrupts\_library.h@{interrupts\_library.h}!EN\_EXT\_INTERRUPT\_BITS@{EN\_EXT\_INTERRUPT\_BITS}}
+\index{EN\_EXT\_INTERRUPT\_BITS@{EN\_EXT\_INTERRUPT\_BITS}!interrupts\_library.h@{interrupts\_library.h}}
+\doxysubsubsection{\texorpdfstring{EN\_EXT\_INTERRUPT\_BITS}{EN\_EXT\_INTERRUPT\_BITS}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57}{EN\+\_\+\+EXT\+\_\+\+INTERRUPT\+\_\+\+BITS}}}
+
+
+
+Control sense configuration bits. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ISC00@{ISC00}!interrupts\_library.h@{interrupts\_library.h}}\index{interrupts\_library.h@{interrupts\_library.h}!ISC00@{ISC00}}}\mbox{\Hypertarget{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57a8f9f0e4ce99a9484a7ec0671d32e1780}\label{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57a8f9f0e4ce99a9484a7ec0671d32e1780}} 
+ISC00&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ISC01@{ISC01}!interrupts\_library.h@{interrupts\_library.h}}\index{interrupts\_library.h@{interrupts\_library.h}!ISC01@{ISC01}}}\mbox{\Hypertarget{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57a9a96e1e0ca16c5a287381ba357b7b0c1}\label{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57a9a96e1e0ca16c5a287381ba357b7b0c1}} 
+ISC01&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ISC10@{ISC10}!interrupts\_library.h@{interrupts\_library.h}}\index{interrupts\_library.h@{interrupts\_library.h}!ISC10@{ISC10}}}\mbox{\Hypertarget{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57a8eee8bfe5ae7a1fd74df15b118c93ac7}\label{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57a8eee8bfe5ae7a1fd74df15b118c93ac7}} 
+ISC10&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ISC11@{ISC11}!interrupts\_library.h@{interrupts\_library.h}}\index{interrupts\_library.h@{interrupts\_library.h}!ISC11@{ISC11}}}\mbox{\Hypertarget{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57a5f4ac75573159e999236f8ea307e2005}\label{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57a5f4ac75573159e999236f8ea307e2005}} 
+ISC11&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ISC2@{ISC2}!interrupts\_library.h@{interrupts\_library.h}}\index{interrupts\_library.h@{interrupts\_library.h}!ISC2@{ISC2}}}\mbox{\Hypertarget{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57ab1eb81c949b3dc995e7b69afd01cb887}\label{interrupts__library_8h_a9cfda7eba057b91cd8d13d006e06cc57ab1eb81c949b3dc995e7b69afd01cb887}} 
+ISC2&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350}\label{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350}} 
+\index{interrupts\_library.h@{interrupts\_library.h}!EN\_EXT\_INTERRUPT\_SRC@{EN\_EXT\_INTERRUPT\_SRC}}
+\index{EN\_EXT\_INTERRUPT\_SRC@{EN\_EXT\_INTERRUPT\_SRC}!interrupts\_library.h@{interrupts\_library.h}}
+\doxysubsubsection{\texorpdfstring{EN\_EXT\_INTERRUPT\_SRC}{EN\_EXT\_INTERRUPT\_SRC}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350}{EN\+\_\+\+EXT\+\_\+\+INTERRUPT\+\_\+\+SRC}}}
+
+
+
+Specifies the external interrupts source. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INT0@{INT0}!interrupts\_library.h@{interrupts\_library.h}}\index{interrupts\_library.h@{interrupts\_library.h}!INT0@{INT0}}}\mbox{\Hypertarget{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350a15eea8e66ea11820ade640821d84382d}\label{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350a15eea8e66ea11820ade640821d84382d}} 
+INT0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INT1@{INT1}!interrupts\_library.h@{interrupts\_library.h}}\index{interrupts\_library.h@{interrupts\_library.h}!INT1@{INT1}}}\mbox{\Hypertarget{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350af557cd0d786ab83c4771da6eea65727b}\label{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350af557cd0d786ab83c4771da6eea65727b}} 
+INT1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INT2@{INT2}!interrupts\_library.h@{interrupts\_library.h}}\index{interrupts\_library.h@{interrupts\_library.h}!INT2@{INT2}}}\mbox{\Hypertarget{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350ac982725fadf3a115b854a6ff2abaa137}\label{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350ac982725fadf3a115b854a6ff2abaa137}} 
+INT2&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}\label{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}} 
+\index{interrupts\_library.h@{interrupts\_library.h}!EN\_INT\_ERROR\_STATE@{EN\_INT\_ERROR\_STATE}}
+\index{EN\_INT\_ERROR\_STATE@{EN\_INT\_ERROR\_STATE}!interrupts\_library.h@{interrupts\_library.h}}
+\doxysubsubsection{\texorpdfstring{EN\_INT\_ERROR\_STATE}{EN\_INT\_ERROR\_STATE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}{EN\+\_\+\+INT\+\_\+\+ERROR\+\_\+\+STATE}}}
+
+
+
+Specifies the state of DIO functions. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INT\_SUCCESS@{INT\_SUCCESS}!interrupts\_library.h@{interrupts\_library.h}}\index{interrupts\_library.h@{interrupts\_library.h}!INT\_SUCCESS@{INT\_SUCCESS}}}\mbox{\Hypertarget{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1a4197c09e9075ad5e8ad90f57372bd739}\label{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1a4197c09e9075ad5e8ad90f57372bd739}} 
+INT\+\_\+\+SUCCESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INT\_GLOBAL\_INT\_NOT\_SET@{INT\_GLOBAL\_INT\_NOT\_SET}!interrupts\_library.h@{interrupts\_library.h}}\index{interrupts\_library.h@{interrupts\_library.h}!INT\_GLOBAL\_INT\_NOT\_SET@{INT\_GLOBAL\_INT\_NOT\_SET}}}\mbox{\Hypertarget{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1ae0bd67ad37e6004eefd3e7969f76f1d5}\label{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1ae0bd67ad37e6004eefd3e7969f76f1d5}} 
+INT\+\_\+\+GLOBAL\+\_\+\+INT\+\_\+\+NOT\+\_\+\+SET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INT\_INVALID\_CONTROL@{INT\_INVALID\_CONTROL}!interrupts\_library.h@{interrupts\_library.h}}\index{interrupts\_library.h@{interrupts\_library.h}!INT\_INVALID\_CONTROL@{INT\_INVALID\_CONTROL}}}\mbox{\Hypertarget{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1afb8b403afaafa337ac0135ddabdcf3e4}\label{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1afb8b403afaafa337ac0135ddabdcf3e4}} 
+INT\+\_\+\+INVALID\+\_\+\+CONTROL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INT\_INVALID\_EXTERNAL\_SRC@{INT\_INVALID\_EXTERNAL\_SRC}!interrupts\_library.h@{interrupts\_library.h}}\index{interrupts\_library.h@{interrupts\_library.h}!INT\_INVALID\_EXTERNAL\_SRC@{INT\_INVALID\_EXTERNAL\_SRC}}}\mbox{\Hypertarget{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1aa0eaf8d9cd5b63efb2ff8e9375a98eb7}\label{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1aa0eaf8d9cd5b63efb2ff8e9375a98eb7}} 
+INT\+\_\+\+INVALID\+\_\+\+EXTERNAL\+\_\+\+SRC&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{interrupts__library_8h_a139f533d643326011aa87ae8eb189462}\label{interrupts__library_8h_a139f533d643326011aa87ae8eb189462}} 
+\index{interrupts\_library.h@{interrupts\_library.h}!INT\_EnableINT0@{INT\_EnableINT0}}
+\index{INT\_EnableINT0@{INT\_EnableINT0}!interrupts\_library.h@{interrupts\_library.h}}
+\doxysubsubsection{\texorpdfstring{INT\_EnableINT0()}{INT\_EnableINT0()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}{EN\+\_\+\+INT\+\_\+\+ERROR\+\_\+\+STATE}} INT\+\_\+\+Enable\+INT0 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enables external interrupt 0. 
+
+\begin{DoxyReturn}{Returns}
+INT\+\_\+\+GLOBAL\+\_\+\+INT\+\_\+\+NOT\+\_\+\+SET 
+
+INT\+\_\+\+SUCCESS 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interrupts__library_8h_a7405540d426cb22a5ec670eb02a4e2d8}\label{interrupts__library_8h_a7405540d426cb22a5ec670eb02a4e2d8}} 
+\index{interrupts\_library.h@{interrupts\_library.h}!INT\_EnableINT1@{INT\_EnableINT1}}
+\index{INT\_EnableINT1@{INT\_EnableINT1}!interrupts\_library.h@{interrupts\_library.h}}
+\doxysubsubsection{\texorpdfstring{INT\_EnableINT1()}{INT\_EnableINT1()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}{EN\+\_\+\+INT\+\_\+\+ERROR\+\_\+\+STATE}} INT\+\_\+\+Enable\+INT1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enables external interrupt 1. 
+
+\begin{DoxyReturn}{Returns}
+INT\+\_\+\+GLOBAL\+\_\+\+INT\+\_\+\+NOT\+\_\+\+SET 
+
+INT\+\_\+\+SUCCESS 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interrupts__library_8h_ab57cab640828f558409986d13ad88329}\label{interrupts__library_8h_ab57cab640828f558409986d13ad88329}} 
+\index{interrupts\_library.h@{interrupts\_library.h}!INT\_EnableINT2@{INT\_EnableINT2}}
+\index{INT\_EnableINT2@{INT\_EnableINT2}!interrupts\_library.h@{interrupts\_library.h}}
+\doxysubsubsection{\texorpdfstring{INT\_EnableINT2()}{INT\_EnableINT2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}{EN\+\_\+\+INT\+\_\+\+ERROR\+\_\+\+STATE}} INT\+\_\+\+Enable\+INT2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enables external interrupt 2. 
+
+\begin{DoxyReturn}{Returns}
+INT\+\_\+\+GLOBAL\+\_\+\+INT\+\_\+\+NOT\+\_\+\+SET 
+
+INT\+\_\+\+SUCCESS 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interrupts__library_8h_a7419cfa46eed99e7c1e19625047ed55d}\label{interrupts__library_8h_a7419cfa46eed99e7c1e19625047ed55d}} 
+\index{interrupts\_library.h@{interrupts\_library.h}!INT\_ExtInterruptInit@{INT\_ExtInterruptInit}}
+\index{INT\_ExtInterruptInit@{INT\_ExtInterruptInit}!interrupts\_library.h@{interrupts\_library.h}}
+\doxysubsubsection{\texorpdfstring{INT\_ExtInterruptInit()}{INT\_ExtInterruptInit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}{EN\+\_\+\+INT\+\_\+\+ERROR\+\_\+\+STATE}} INT\+\_\+\+Ext\+Interrupt\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i_n_t___ext_init__t}{INT\+\_\+\+Ext\+Init\+\_\+t}} $\ast$}]{ext\+\_\+int\+\_\+config\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Enables and sets the sense control of the external interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ext\+\_\+int\+\_\+config\+\_\+struct} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+INT\+\_\+\+INVALID\+\_\+\+EXTERNAL\+\_\+\+SRC 
+
+INT\+\_\+\+SUCCESS 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interrupts__library_8h_aa1f0835d22838f6ac2b68143ab8d2a6a}\label{interrupts__library_8h_aa1f0835d22838f6ac2b68143ab8d2a6a}} 
+\index{interrupts\_library.h@{interrupts\_library.h}!INT\_ExtIntSenseControl@{INT\_ExtIntSenseControl}}
+\index{INT\_ExtIntSenseControl@{INT\_ExtIntSenseControl}!interrupts\_library.h@{interrupts\_library.h}}
+\doxysubsubsection{\texorpdfstring{INT\_ExtIntSenseControl()}{INT\_ExtIntSenseControl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interrupts__library_8h_a10b52a3cf4ce75d922ea1f86a5e4ffe1}{EN\+\_\+\+INT\+\_\+\+ERROR\+\_\+\+STATE}} INT\+\_\+\+Ext\+Int\+Sense\+Control (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interrupts__library_8h_a27185f3cacd97062c5dc769d64e00350}{EN\+\_\+\+EXT\+\_\+\+INTERRUPT\+\_\+\+SRC}}}]{src,  }\item[{\mbox{\hyperlink{interrupts__library_8h_a83fabc16826b429eb9c1ecd8549f5863}{EN\+\_\+\+EXT\+\_\+\+INT\+\_\+\+SENSE\+\_\+\+CONTROL}}}]{control }\end{DoxyParamCaption})}
+
+
+
+Controls the triggering mechanism of INT1 and INT0. Interrupt 0 sense control. 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ISC01 Bit 3   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ISC00 Bit 2   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ISC01 Bit 3   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ISC00 Bit 2   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+0   &0   &INT0 triggered on low level.    \\\cline{1-3}
+0   &1   &Any logic change triggers.    \\\cline{1-3}
+1   &0   &Falling edge generates interrupt.    \\\cline{1-3}
+1   &1   &Rising edge generates interrupt.   \\\cline{1-3}
+\end{longtabu}
+Interrupt 1 sense control \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ISC11 Bit 3   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ISC10 Bit 2   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ISC11 Bit 3   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ISC10 Bit 2   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+0   &0   &INT1 triggered on low level.    \\\cline{1-3}
+0   &1   &Any logic change triggers.    \\\cline{1-3}
+1   &0   &Falling edge generates interrupt.    \\\cline{1-3}
+1   &1   &Rising edge generates interrupt.   \\\cline{1-3}
+\end{longtabu}
+Interrupt 2 sense control 0 -\/ Falling edge activates the interrupt. 1 -\/ Rising edge activates the interrupt. 
